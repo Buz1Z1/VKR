@@ -17,8 +17,9 @@ namespace restaur
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
-            //Application.Run(new POS());
+            //Application.Run(new login());
+            Application.Run(new POS());
+            //Application.Run(new Main_menu());
         }
     }
 }

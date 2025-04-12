@@ -34,6 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.t_ofic = new System.Windows.Forms.Label();
+            this.t_table = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.new_order = new Guna.UI2.WinForms.Guna2Button();
@@ -52,20 +56,17 @@
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.Create_order = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.choose_clint = new Guna.UI2.WinForms.Guna2Button();
+            this.create_client = new Guna.UI2.WinForms.Guna2Button();
             this.Total_sum = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.products = new System.Windows.Forms.FlowLayoutPanel();
             this.category_panel = new System.Windows.Forms.FlowLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.t_table = new System.Windows.Forms.Label();
-            this.t_ofic = new System.Windows.Forms.Label();
-            this.create_client = new Guna.UI2.WinForms.Guna2Button();
-            this.choose_clint = new Guna.UI2.WinForms.Guna2Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -95,6 +96,44 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1366, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // t_ofic
+            // 
+            this.t_ofic.AutoSize = true;
+            this.t_ofic.ForeColor = System.Drawing.Color.White;
+            this.t_ofic.Location = new System.Drawing.Point(1020, 63);
+            this.t_ofic.Name = "t_ofic";
+            this.t_ofic.Size = new System.Drawing.Size(0, 25);
+            this.t_ofic.TabIndex = 7;
+            // 
+            // t_table
+            // 
+            this.t_table.AutoSize = true;
+            this.t_table.ForeColor = System.Drawing.Color.White;
+            this.t_table.Location = new System.Drawing.Point(1028, 20);
+            this.t_table.Name = "t_table";
+            this.t_table.Size = new System.Drawing.Size(0, 25);
+            this.t_table.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(906, 63);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 25);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Официант:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(955, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 25);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Стол:";
             // 
             // guna2ControlBox1
             // 
@@ -335,6 +374,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.Create_order);
             this.panel6.Controls.Add(this.guna2Button1);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.label8);
@@ -347,6 +387,89 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1366, 94);
             this.panel6.TabIndex = 5;
+            // 
+            // Create_order
+            // 
+            this.Create_order.BorderRadius = 10;
+            this.Create_order.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Create_order.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Create_order.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Create_order.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Create_order.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
+            this.Create_order.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.Create_order.ForeColor = System.Drawing.Color.White;
+            this.Create_order.Location = new System.Drawing.Point(1235, 8);
+            this.Create_order.Name = "Create_order";
+            this.Create_order.Size = new System.Drawing.Size(119, 76);
+            this.Create_order.TabIndex = 7;
+            this.Create_order.Text = "Создать заказ";
+            this.Create_order.Click += new System.EventHandler(this.Create_order_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(759, 8);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(126, 76);
+            this.guna2Button1.TabIndex = 6;
+            this.guna2Button1.Text = "Списать баллы";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(535, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 25);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Баллы:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(535, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 25);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Имя:";
+            // 
+            // choose_clint
+            // 
+            this.choose_clint.BorderRadius = 10;
+            this.choose_clint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.choose_clint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.choose_clint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.choose_clint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.choose_clint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
+            this.choose_clint.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.choose_clint.ForeColor = System.Drawing.Color.White;
+            this.choose_clint.Location = new System.Drawing.Point(403, 8);
+            this.choose_clint.Name = "choose_clint";
+            this.choose_clint.Size = new System.Drawing.Size(126, 76);
+            this.choose_clint.TabIndex = 3;
+            this.choose_clint.Text = "Выбрать клиента";
+            // 
+            // create_client
+            // 
+            this.create_client.BorderRadius = 10;
+            this.create_client.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.create_client.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.create_client.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.create_client.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.create_client.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
+            this.create_client.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.create_client.ForeColor = System.Drawing.Color.White;
+            this.create_client.Location = new System.Drawing.Point(200, 8);
+            this.create_client.Name = "create_client";
+            this.create_client.Size = new System.Drawing.Size(99, 76);
+            this.create_client.TabIndex = 2;
+            this.create_client.Text = "Новый клиент";
             // 
             // Total_sum
             // 
@@ -396,110 +519,6 @@
             this.category_panel.Name = "category_panel";
             this.category_panel.Size = new System.Drawing.Size(200, 517);
             this.category_panel.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(955, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Стол:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(906, 63);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 25);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Официант:";
-            // 
-            // t_table
-            // 
-            this.t_table.AutoSize = true;
-            this.t_table.ForeColor = System.Drawing.Color.White;
-            this.t_table.Location = new System.Drawing.Point(1028, 20);
-            this.t_table.Name = "t_table";
-            this.t_table.Size = new System.Drawing.Size(0, 25);
-            this.t_table.TabIndex = 6;
-            // 
-            // t_ofic
-            // 
-            this.t_ofic.AutoSize = true;
-            this.t_ofic.ForeColor = System.Drawing.Color.White;
-            this.t_ofic.Location = new System.Drawing.Point(1020, 63);
-            this.t_ofic.Name = "t_ofic";
-            this.t_ofic.Size = new System.Drawing.Size(0, 25);
-            this.t_ofic.TabIndex = 7;
-            // 
-            // create_client
-            // 
-            this.create_client.BorderRadius = 10;
-            this.create_client.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.create_client.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.create_client.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.create_client.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.create_client.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.create_client.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.create_client.ForeColor = System.Drawing.Color.White;
-            this.create_client.Location = new System.Drawing.Point(200, 8);
-            this.create_client.Name = "create_client";
-            this.create_client.Size = new System.Drawing.Size(99, 76);
-            this.create_client.TabIndex = 2;
-            this.create_client.Text = "Новый клиент";
-            // 
-            // choose_clint
-            // 
-            this.choose_clint.BorderRadius = 10;
-            this.choose_clint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.choose_clint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.choose_clint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.choose_clint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.choose_clint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.choose_clint.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.choose_clint.ForeColor = System.Drawing.Color.White;
-            this.choose_clint.Location = new System.Drawing.Point(403, 8);
-            this.choose_clint.Name = "choose_clint";
-            this.choose_clint.Size = new System.Drawing.Size(126, 76);
-            this.choose_clint.TabIndex = 3;
-            this.choose_clint.Text = "Выбрать клиента";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(535, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 25);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Имя:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(535, 50);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 25);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Баллы:";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(759, 8);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(126, 76);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Списать баллы";
             // 
             // POS
             // 
@@ -565,5 +584,6 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button choose_clint;
         private Guna.UI2.WinForms.Guna2Button create_client;
+        private Guna.UI2.WinForms.Guna2Button Create_order;
     }
 }

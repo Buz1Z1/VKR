@@ -16,8 +16,8 @@ namespace restaur.forms.POS
     {
         DB_connect dB_Connect = new DB_connect();
 
-        int id_table;
-        int id_ofic;
+        int id_table=0;
+        int id_emp=0;
         public POS()
         {
             InitializeComponent();
@@ -188,6 +188,43 @@ namespace restaur.forms.POS
             
         }
 
-        
+
+        private void Create_order_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //заполнение заказа
+                var cmd = new NpgsqlCommand("INSERT into orders (date,id_client,id_table,sum,id_emp,time) values (@date,@id_client,@id_table,@sum,@id_emp,@time) RETURNING id;", dB_Connect.conn);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now.ToShortDateString());
+                cmd.Parameters.AddWithValue("@time", DateTime.Now.ToShortTimeString());
+                cmd.Parameters.AddWithValue("@id_client", id_table);//добавить обработку клиента и стола
+                cmd.Parameters.AddWithValue("@sum", Convert.ToDouble(Total_sum.Text));
+                cmd.Parameters.AddWithValue("@id_table", id_table);
+                cmd.Parameters.AddWithValue("id_emp", id_emp);
+                dB_Connect.openConnect();
+                int reader = (int)cmd.ExecuteScalar();
+
+                //заполнение деталей заказа
+                cmd.Parameters.Clear();
+                string querry = "INSERT into order_detail (id_order,id_dish,count) values ";
+                foreach (DataGridViewRow i in dg_order.Rows)
+                {
+                    querry += "(" + reader.ToString() + ", " + i.Cells["id"].Value.ToString() + ", " + i.Cells["quantity"].Value.ToString() + "),";
+                }
+                querry = querry.Remove(querry.Length - 1, 1);
+                querry += ";";
+                cmd = new NpgsqlCommand(querry, dB_Connect.conn);
+                NpgsqlDataReader ww = cmd.ExecuteReader();
+                dB_Connect.closeConnect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            t_ofic.Text="" ;
+            t_table.Text = "";
+            dg_order.Rows.Clear();
+            Total_sum.Text = "0.0";
+        }
     }
 }

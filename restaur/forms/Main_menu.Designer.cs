@@ -46,6 +46,7 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Center = new Guna.UI2.WinForms.Guna2Panel();
+            this.date_time = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(99)))), ((int)(((byte)(101)))));
+            this.guna2Panel1.Controls.Add(this.date_time);
             this.guna2Panel1.Controls.Add(this.btn_POS);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.btn_orders);
@@ -268,9 +270,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(50, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.Size = new System.Drawing.Size(145, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "Добро пожаловать";
             // 
             // guna2ControlBox3
             // 
@@ -320,6 +322,17 @@
             this.Center.Size = new System.Drawing.Size(990, 645);
             this.Center.TabIndex = 8;
             // 
+            // date_time
+            // 
+            this.date_time.AutoSize = true;
+            this.date_time.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.date_time.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.date_time.Location = new System.Drawing.Point(28, 22);
+            this.date_time.Name = "date_time";
+            this.date_time.Size = new System.Drawing.Size(61, 25);
+            this.date_time.TabIndex = 10;
+            this.date_time.Text = "00 00";
+            // 
             // Main_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -336,6 +349,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_menu";
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -361,5 +375,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btn_POS;
+        private System.Windows.Forms.Label date_time;
     }
 }

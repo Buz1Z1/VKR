@@ -17,6 +17,7 @@ namespace restaur
         public Main_menu()
         {
             InitializeComponent();
+            date_time.Text = DateTime.Now.ToLongDateString();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -27,7 +28,8 @@ namespace restaur
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
+            label1.Text = "Отчеты";
+            AddControls(new Reports());
         }
 
         private void AddControls(Form form)
