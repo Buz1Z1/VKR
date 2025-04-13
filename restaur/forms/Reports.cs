@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.Charts.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,19 @@ namespace restaur.forms
 {
     public partial class Reports : Form
     {
+        DB_connect dB_Connect = new DB_connect();
         public Reports()
         {
             InitializeComponent();
         }
-        private void grafik()
+        private void cnt_orders()
         {
-
+            var dataset = new GunaLineDataset();
+            for (int i = 0; i < 24; i++)
+            {
+                dataset.DataPoints.Add()
+            }
+            dB_Connect.openConnect();
         }
     }
 

@@ -51,7 +51,7 @@ namespace restaur
             {
                 var cmd = new NpgsqlCommand("INSERT into employee (fio,birth,addres,passport,phone,job,salary) values(@fio,@birth,@addres,@passport,@phone,@job,@salary)", dB_Connect.conn);
                 cmd.Parameters.AddWithValue("@fio", fio.Text);
-                cmd.Parameters.AddWithValue("@birth", b);
+                cmd.Parameters.AddWithValue("@birth", b.ToShortDateString());
                 cmd.Parameters.AddWithValue("@addres", addres.Text);
                 cmd.Parameters.AddWithValue("@passport", passport.Text);
                 cmd.Parameters.AddWithValue("@phone", phone.Text);
