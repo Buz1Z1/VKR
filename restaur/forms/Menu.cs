@@ -186,7 +186,7 @@ namespace restaur
                 edit.image.Image =Bitmap.FromFile(edit.image_path.Text);
                 edit.price.Text = dg.Rows[e.RowIndex].Cells["price"].Value.ToString();
                 edit.id.Text = dg.Rows[e.RowIndex].Cells["id"].Value.ToString();
-
+                
                 //добавить заполнение категории блюд
                 cmd = new NpgsqlCommand("Select * from dish_category",dB_Connect.conn);
                 
