@@ -27,7 +27,7 @@ namespace restaur.forms
             var dataset = new GunaLineDataset();
             //Заполнение таблицы
             dB_Connect.openConnect();
-            var cmd = new NpgsqlCommand("select date, count(*) from orders group by date", dB_Connect.conn);
+            var cmd = new NpgsqlCommand("select date, count(*) from orders group by date order by date ASC;", dB_Connect.conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             //Получение ответа от бд
             while (reader.Read())
@@ -43,10 +43,43 @@ namespace restaur.forms
             //dataset.Container.Dispose();
         }
 
-        private void count_dishes()
-        { 
+        //private void count_dishes()
+        //{ 
+        //    gunaChart2.Datasets.Clear();
+        //    var dataset= new GunaBarDataset();
+        //    dB_Connect.openConnect();
+        //    string date = guna2DateTimePicker1.Value.ToShortDateString();
+        //    var cmd = new NpgsqlCommand("select dd.name, sum(od.count) from order_detail od " +
+        //        "join dishes dd on dd.id=od.id_dish \r\njoin orders oo on oo.id=od.id_order " +
+        //        "where oo.date='"+date+"' group by oo.date, od.id_dish, dd.name ", dB_Connect.conn);
+        //    NpgsqlDataReader reader = cmd.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        dataset.DataPoints.Add(reader[0].ToString(), double.Parse(reader[1].ToString()));
+        //    }
+        //    cmd.Dispose();
+        //    dB_Connect.closeConnect();
+        //}
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
             gunaChart2.Datasets.Clear();
-            
+            var dataset = new GunaBarDataset();
+            dB_Connect.openConnect();
+            string date = dateTimePicker1.Value.ToShortDateString();
+            var cmd = new NpgsqlCommand("select dd.name, sum(od.count) from order_detail od " +
+                "join dishes dd on dd.id=od.id_dish \r\njoin orders oo on oo.id=od.id_order " +
+                "where oo.date='" + date + "' group by oo.date, od.id_dish, dd.name ", dB_Connect.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                dataset.DataPoints.Add(reader[0].ToString(), double.Parse(reader[1].ToString()));
+            }
+            cmd.Dispose();
+            dB_Connect.closeConnect();
+            gunaChart2.YAxes.Display = true;
+            gunaChart2.XAxes.Display = true;
+            gunaChart2.Datasets.Add(dataset);
         }
     }
 

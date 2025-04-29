@@ -95,3 +95,5 @@ D:\vkr\VKR\restaur\obj\Debug\restaur.csproj.CoreCompileInputs.cache
 D:\vkr\VKR\restaur\obj\Debug\restaur.csproj.Up2Date
 D:\vkr\VKR\restaur\obj\Debug\restaur.exe
 D:\vkr\VKR\restaur\obj\Debug\restaur.pdb
+D:\vkr\VKR\restaur\obj\Debug\restaur.forms.Add_storage.resources
+D:\vkr\VKR\restaur\obj\Debug\restaur.forms.Storage.resources

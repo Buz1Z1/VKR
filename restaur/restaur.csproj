@@ -109,6 +109,12 @@
     <Compile Include="forms\Add_client.Designer.cs">
       <DependentUpon>Add_client.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Add_storage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Add_storage.Designer.cs">
+      <DependentUpon>Add_storage.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Add_table.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,12 @@
     <Compile Include="forms\Tables.Designer.cs">
       <DependentUpon>Tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Storage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Storage.Designer.cs">
+      <DependentUpon>Storage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Add_emp.resx">
@@ -198,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Add_client.resx">
       <DependentUpon>Add_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Add_storage.resx">
+      <DependentUpon>Add_storage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Add_table.resx">
       <DependentUpon>Add_table.cs</DependentUpon>
@@ -234,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Storage.resx">
+      <DependentUpon>Storage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Tables.resx">
       <DependentUpon>Tables.cs</DependentUpon>

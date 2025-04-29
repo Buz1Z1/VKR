@@ -91,5 +91,11 @@ namespace restaur
             POS pos = new POS();
             pos.Show();
         }
+
+        private void btn_wareh_Click(object sender, EventArgs e)
+        {
+            label1.Text = "Склад";
+            AddControls(new Storage());
+        }
     }
 }

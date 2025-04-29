@@ -3,40 +3,52 @@
   "WorkspaceRootPath": "D:\\vkr\\VKR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\add_storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\add_storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\dish_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\dish_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\add_storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\add_storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\dish_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\dish_edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\orders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\pos\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\pos\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\pos\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\pos\\pos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\main_menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,24 +58,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dish_edit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Dish_edit.cs",
+              "RelativeDocumentMoniker": "restaur\\forms\\Dish_edit.cs",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Dish_edit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "restaur\\forms\\Dish_edit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:22:09.323Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dish_edit.cs",
+              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Dish_edit.cs",
+              "RelativeDocumentMoniker": "restaur\\forms\\Dish_edit.cs",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Dish_edit.cs",
+              "RelativeToolTip": "restaur\\forms\\Dish_edit.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwB8AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T13:22:11.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Add_storage.cs",
+              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Add_storage.cs",
+              "RelativeDocumentMoniker": "restaur\\forms\\Add_storage.cs",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Add_storage.cs",
+              "RelativeToolTip": "restaur\\forms\\Add_storage.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswB0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:03:07.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Add_storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Add_storage.cs",
+              "RelativeDocumentMoniker": "restaur\\forms\\Add_storage.cs",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Add_storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "restaur\\forms\\Add_storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T10:59:31.158Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Storage.cs",
+              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs",
+              "RelativeDocumentMoniker": "restaur\\forms\\Storage.cs",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs",
+              "RelativeToolTip": "restaur\\forms\\Storage.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwEMAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T10:43:53.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs",
+              "RelativeDocumentMoniker": "restaur\\forms\\Storage.cs",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "restaur\\forms\\Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T10:00:13.733Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Orders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Orders.cs",
+              "RelativeDocumentMoniker": "restaur\\forms\\Orders.cs",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Orders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "restaur\\forms\\Orders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T19:04:24.126Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Reports.cs",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Reports.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\Reports.cs",
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Reports.cs",
               "RelativeToolTip": "restaur\\forms\\Reports.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAtwCcAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAUwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T18:22:25.136Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "Reports.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Reports.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\Reports.cs",
@@ -75,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\Program.cs",
               "RelativeDocumentMoniker": "restaur\\Program.cs",
@@ -89,44 +188,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "POS.cs",
-              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\POS\\POS.cs",
-              "RelativeDocumentMoniker": "restaur\\forms\\POS\\POS.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\POS\\POS.cs",
-              "RelativeToolTip": "restaur\\forms\\POS\\POS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T09:26:01.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "POS.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\POS\\POS.cs",
-              "RelativeDocumentMoniker": "restaur\\forms\\POS\\POS.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\POS\\POS.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "restaur\\forms\\POS\\POS.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T09:25:05.22Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Menu.cs",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Menu.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\Menu.cs",
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Menu.cs",
               "RelativeToolTip": "restaur\\forms\\Menu.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAQwLwAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAYwIUAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T07:50:08.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Menu.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\Menu.cs",
@@ -135,29 +209,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T07:50:01.078Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Main_menu.cs",
-              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Main_menu.cs",
-              "RelativeDocumentMoniker": "restaur\\forms\\Main_menu.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Main_menu.cs",
-              "RelativeToolTip": "restaur\\forms\\Main_menu.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAIAwwBMAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T07:48:39.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Main_menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Main_menu.cs",
-              "RelativeDocumentMoniker": "restaur\\forms\\Main_menu.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Main_menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "restaur\\forms\\Main_menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T07:26:10.072Z"
             }
           ]
         }

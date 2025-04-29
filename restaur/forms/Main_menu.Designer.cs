@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.date_time = new System.Windows.Forms.Label();
             this.btn_POS = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.btn_orders = new Guna.UI2.WinForms.Guna2Button();
@@ -46,7 +47,6 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Center = new Guna.UI2.WinForms.Guna2Panel();
-            this.date_time = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,17 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(210, 692);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // date_time
+            // 
+            this.date_time.AutoSize = true;
+            this.date_time.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.date_time.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.date_time.Location = new System.Drawing.Point(28, 22);
+            this.date_time.Name = "date_time";
+            this.date_time.Size = new System.Drawing.Size(61, 25);
+            this.date_time.TabIndex = 10;
+            this.date_time.Text = "00 00";
             // 
             // btn_POS
             // 
@@ -192,6 +203,7 @@
             this.btn_wareh.Size = new System.Drawing.Size(176, 58);
             this.btn_wareh.TabIndex = 4;
             this.btn_wareh.Text = "Склад";
+            this.btn_wareh.Click += new System.EventHandler(this.btn_wareh_Click);
             // 
             // btn_clients
             // 
@@ -321,17 +333,6 @@
             this.Center.Name = "Center";
             this.Center.Size = new System.Drawing.Size(990, 645);
             this.Center.TabIndex = 8;
-            // 
-            // date_time
-            // 
-            this.date_time.AutoSize = true;
-            this.date_time.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.date_time.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.date_time.Location = new System.Drawing.Point(28, 22);
-            this.date_time.Name = "date_time";
-            this.date_time.Size = new System.Drawing.Size(61, 25);
-            this.date_time.TabIndex = 10;
-            this.date_time.Text = "00 00";
             // 
             // Main_menu
             // 
