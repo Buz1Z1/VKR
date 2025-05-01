@@ -163,6 +163,16 @@ namespace restaur.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_удалить_321 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-удалить-321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_управление_коммерческим_развитием_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-управление-коммерческим-развитием-32", resourceCulture);

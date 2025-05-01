@@ -58,6 +58,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dg_category = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.id_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -72,16 +76,10 @@
             this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dish = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.guna2AnimateWindow2 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.id_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name_c = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delete1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_menu)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -420,6 +418,43 @@
             this.dg_category.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dg_category.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_category_CellContentClick);
             // 
+            // id_c
+            // 
+            this.id_c.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id_c.HeaderText = "id";
+            this.id_c.MinimumWidth = 30;
+            this.id_c.Name = "id_c";
+            this.id_c.ReadOnly = true;
+            this.id_c.Width = 30;
+            // 
+            // name_c
+            // 
+            this.name_c.HeaderText = "Название";
+            this.name_c.Name = "name_c";
+            this.name_c.ReadOnly = true;
+            // 
+            // edit1
+            // 
+            this.edit1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.edit1.FillWeight = 50F;
+            this.edit1.HeaderText = "";
+            this.edit1.Image = global::restaur.Properties.Resources.icons8_редактировать_32;
+            this.edit1.MinimumWidth = 40;
+            this.edit1.Name = "edit1";
+            this.edit1.ReadOnly = true;
+            this.edit1.Width = 40;
+            // 
+            // delete1
+            // 
+            this.delete1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.delete1.FillWeight = 50F;
+            this.delete1.HeaderText = "";
+            this.delete1.Image = global::restaur.Properties.Resources.icons8_удалить_32;
+            this.delete1.MinimumWidth = 40;
+            this.delete1.Name = "delete1";
+            this.delete1.ReadOnly = true;
+            this.delete1.Width = 40;
+            // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.label3);
@@ -670,43 +705,6 @@
             this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
             this.dataGridViewImageColumn4.ReadOnly = true;
             // 
-            // id_c
-            // 
-            this.id_c.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id_c.HeaderText = "id";
-            this.id_c.MinimumWidth = 30;
-            this.id_c.Name = "id_c";
-            this.id_c.ReadOnly = true;
-            this.id_c.Width = 30;
-            // 
-            // name_c
-            // 
-            this.name_c.HeaderText = "Название";
-            this.name_c.Name = "name_c";
-            this.name_c.ReadOnly = true;
-            // 
-            // edit1
-            // 
-            this.edit1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.edit1.FillWeight = 50F;
-            this.edit1.HeaderText = "";
-            this.edit1.Image = global::restaur.Properties.Resources.icons8_редактировать_32;
-            this.edit1.MinimumWidth = 40;
-            this.edit1.Name = "edit1";
-            this.edit1.ReadOnly = true;
-            this.edit1.Width = 40;
-            // 
-            // delete1
-            // 
-            this.delete1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.delete1.FillWeight = 50F;
-            this.delete1.HeaderText = "";
-            this.delete1.Image = global::restaur.Properties.Resources.icons8_удалить_32;
-            this.delete1.MinimumWidth = 40;
-            this.delete1.Name = "delete1";
-            this.delete1.ReadOnly = true;
-            this.delete1.Width = 40;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -754,8 +752,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private Guna.UI2.WinForms.Guna2DataGridView teh_card;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
-        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ComboBox dish;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

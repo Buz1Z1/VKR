@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace restaur.forms
 {
@@ -61,7 +62,7 @@ namespace restaur.forms
 
                 Add_storage add_Storage = new Add_storage();
                 add_Storage.id= Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                //добавить заполнение категории блюд
+                
                 add_Storage.name.Text = dg.Rows[e.RowIndex].Cells["name"].Value.ToString();
                 add_Storage.price.Text = dg.Rows[e.RowIndex].Cells["price"].Value.ToString();
                 add_Storage.count.Text = dg.Rows[e.RowIndex].Cells["rest"].Value.ToString();
@@ -93,6 +94,62 @@ namespace restaur.forms
                     }
 
                 }
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            if(folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                ExportDatagrid(guna2DataGridView1,folderBrowserDialog.SelectedPath);
+        }
+
+        public void ExportDatagrid(DataGridView dg, string filePath)
+        {
+            try
+            {
+                Excel.Application excelApp = new Excel.Application();
+                Excel.Workbook wb = excelApp.Workbooks.Add();
+                Excel.Worksheet ws = wb.Sheets[1];
+                excelApp.Visible = false;
+                excelApp.DisplayAlerts = false;
+                ws.Cells[1, 2] = "Заявка на заказ товара от " + DateTime.Now.ToShortDateString();
+                ws.Cells[2, 2] = "Наименование";
+                ws.Cells[2, 3] = "Количество для заказа";
+                for (int i = 0; i <=dg.RowCount-2; i++)
+                {
+                    ws.Cells[i + 3, 1] = i + 1;
+                    for (int j = 0; j <=dg.ColumnCount - 1; j++)
+                    {
+                        ws.Cells[i + 3, j+2] = dg.Rows[i].Cells[j].Value;
+                        
+                    }
+                }
+                ws.Columns.AutoFit();
+                string fileName = DateTime.Now.ToString("dd_MM HH_mm") + ".xlsx";
+                string fullPath=System.IO.Path.Combine(filePath,fileName);
+                wb.SaveAs(fullPath);
+                wb.Close();
+                excelApp.Quit();
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(ws);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(wb);
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp);
+                dg.Rows.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Excel: {ex.Message}", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // сделать автозаполение ингридиентов меньше минимального запаса
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var dg = guna2DataGridView1;
+            string colname = dg.Columns[e.ColumnIndex].Name;
+            if (colname == "del_or")
+            { 
+                dg.Rows.RemoveAt(dg.Rows[e.RowIndex].Index); //обработка нулевой строки
             }
         }
     }

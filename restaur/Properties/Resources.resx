@@ -124,11 +124,8 @@
   <data name="icons8-пользователь-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\icons8-пользователь-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-стеллаж-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\icons8-стеллаж-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-стол-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\icons8-стол-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-малый-бизнес-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\icons8-малый-бизнес-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-удалить-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\icons8-удалить-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,13 +139,19 @@
   <data name="icons8-плюс-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\icons8-плюс-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-управление-коммерческим-развитием-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\icons8-управление-коммерческим-развитием-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-стеллаж-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\icons8-стеллаж-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-стол-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\icons8-стол-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-меню-ресторана-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\icon\icons8-меню-ресторана-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-малый-бизнес-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\icon\icons8-малый-бизнес-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-управление-коммерческим-развитием-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\icons8-управление-коммерческим-развитием-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-удалить-321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\icon\icons8-удалить-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -34,12 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,6 +48,7 @@
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.HasFormShadow = false;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // guna2DataGridView1
@@ -111,15 +112,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.guna2DataGridView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 94);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 598);
-            this.panel1.TabIndex = 5;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Id";
@@ -149,6 +141,15 @@
             this.Column5.HeaderText = "Column5";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.guna2DataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 94);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(927, 598);
+            this.panel1.TabIndex = 5;
             // 
             // Orders
             // 

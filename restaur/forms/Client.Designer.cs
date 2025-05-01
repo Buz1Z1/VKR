@@ -42,16 +42,16 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dg_client = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.date_create = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.card = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.card = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.date_create = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dg_client)).BeginInit();
@@ -61,6 +61,7 @@
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.HasFormShadow = false;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // label2
@@ -219,16 +220,62 @@
             this.dg_client.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dg_client.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_client_CellContentClick);
             // 
-            // delete
+            // id
             // 
-            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.delete.FillWeight = 50F;
-            this.delete.HeaderText = "";
-            this.delete.Image = global::restaur.Properties.Resources.icons8_удалить_32;
-            this.delete.MinimumWidth = 40;
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
-            this.delete.Width = 40;
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 30;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // fio
+            // 
+            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fio.HeaderText = "ФИО";
+            this.fio.MinimumWidth = 120;
+            this.fio.Name = "fio";
+            this.fio.ReadOnly = true;
+            // 
+            // birth
+            // 
+            this.birth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.birth.HeaderText = "Дата рождения";
+            this.birth.Name = "birth";
+            this.birth.ReadOnly = true;
+            this.birth.Width = 173;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Почта";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.phone.HeaderText = "Телефон";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            this.phone.Width = 111;
+            // 
+            // card
+            // 
+            this.card.HeaderText = "Номер карты";
+            this.card.Name = "card";
+            this.card.ReadOnly = true;
+            // 
+            // bonus
+            // 
+            this.bonus.HeaderText = "Бонусы";
+            this.bonus.Name = "bonus";
+            this.bonus.ReadOnly = true;
+            // 
+            // date_create
+            // 
+            this.date_create.HeaderText = "Дата создания";
+            this.date_create.Name = "date_create";
+            this.date_create.ReadOnly = true;
             // 
             // edit
             // 
@@ -241,62 +288,16 @@
             this.edit.ReadOnly = true;
             this.edit.Width = 40;
             // 
-            // date_create
+            // delete
             // 
-            this.date_create.HeaderText = "Дата создания";
-            this.date_create.Name = "date_create";
-            this.date_create.ReadOnly = true;
-            // 
-            // bonus
-            // 
-            this.bonus.HeaderText = "Бонусы";
-            this.bonus.Name = "bonus";
-            this.bonus.ReadOnly = true;
-            // 
-            // card
-            // 
-            this.card.HeaderText = "Номер карты";
-            this.card.Name = "card";
-            this.card.ReadOnly = true;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.phone.HeaderText = "Телефон";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            this.phone.Width = 111;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Почта";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // birth
-            // 
-            this.birth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.birth.HeaderText = "Дата рождения";
-            this.birth.Name = "birth";
-            this.birth.ReadOnly = true;
-            this.birth.Width = 173;
-            // 
-            // fio
-            // 
-            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fio.HeaderText = "ФИО";
-            this.fio.MinimumWidth = 120;
-            this.fio.Name = "fio";
-            this.fio.ReadOnly = true;
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 30;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.delete.FillWeight = 50F;
+            this.delete.HeaderText = "";
+            this.delete.Image = global::restaur.Properties.Resources.icons8_удалить_32;
+            this.delete.MinimumWidth = 40;
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Width = 40;
             // 
             // Client
             // 
