@@ -119,7 +119,7 @@ namespace restaur.forms
                 for (int i = 0; i <=dg.RowCount-2; i++)
                 {
                     ws.Cells[i + 3, 1] = i + 1;
-                    for (int j = 0; j <=dg.ColumnCount - 1; j++)
+                    for (int j = 0; j <=dg.ColumnCount - 2; j++)
                     {
                         ws.Cells[i + 3, j+2] = dg.Rows[i].Cells[j].Value;
                         

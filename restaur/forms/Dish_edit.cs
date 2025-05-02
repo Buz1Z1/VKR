@@ -14,6 +14,8 @@ namespace restaur
     public partial class Dish_edit : Form
     {
         DB_connect dB_Connect = new DB_connect();
+        public string image_path;
+        public int id;
         public Dish_edit()
         {
             InitializeComponent();
@@ -22,11 +24,11 @@ namespace restaur
         private void clear_form()
         {
             name.Clear();
-            id.Clear();
+            
             descryption.Clear();
             price.Clear();
             image.ImageLocation="";
-            image_path.Clear();
+            
         }
      
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -59,9 +61,9 @@ namespace restaur
                 cmd.Parameters.AddWithValue("@name", name.Text);
                 cmd.Parameters.AddWithValue("@descryption", descryption.Text);
                 cmd.Parameters.AddWithValue("@category_id", Convert.ToInt16(category.SelectedValue));
-                cmd.Parameters.AddWithValue("@image", image_path.Text);
+                cmd.Parameters.AddWithValue("@image", image_path);
                 cmd.Parameters.AddWithValue("@price", Convert.ToDouble(price.Text));
-                cmd.Parameters.AddWithValue("@id", Convert.ToInt16(id.Text));
+                cmd.Parameters.AddWithValue("@id", id);
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();

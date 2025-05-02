@@ -23,6 +23,7 @@ namespace restaur
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             label1.Text = "Меню";
+            
             AddControls(new Menu());
         }
 

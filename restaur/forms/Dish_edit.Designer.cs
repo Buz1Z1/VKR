@@ -35,7 +35,6 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.id = new Guna.UI2.WinForms.Guna2TextBox();
             this.price = new Guna.UI2.WinForms.Guna2TextBox();
             this.descryption = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.image = new System.Windows.Forms.PictureBox();
-            this.image_path = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
@@ -110,27 +108,6 @@
             this.guna2Button6.Size = new System.Drawing.Size(73, 37);
             this.guna2Button6.TabIndex = 7;
             this.guna2Button6.Text = "Выход";
-            // 
-            // id
-            // 
-            this.id.BorderRadius = 5;
-            this.id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.id.DefaultText = "";
-            this.id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id.Location = new System.Drawing.Point(428, 403);
-            this.id.Name = "id";
-            this.id.PasswordChar = '\0';
-            this.id.PlaceholderText = "";
-            this.id.SelectedText = "";
-            this.id.Size = new System.Drawing.Size(201, 29);
-            this.id.TabIndex = 22;
-            this.id.Visible = false;
             // 
             // price
             // 
@@ -312,34 +289,12 @@
             this.image.TabIndex = 37;
             this.image.TabStop = false;
             // 
-            // image_path
-            // 
-            this.image_path.BorderRadius = 5;
-            this.image_path.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.image_path.DefaultText = "";
-            this.image_path.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.image_path.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.image_path.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.image_path.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.image_path.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.image_path.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.image_path.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.image_path.Location = new System.Drawing.Point(428, 368);
-            this.image_path.Name = "image_path";
-            this.image_path.PasswordChar = '\0';
-            this.image_path.PlaceholderText = "";
-            this.image_path.SelectedText = "";
-            this.image_path.Size = new System.Drawing.Size(201, 29);
-            this.image_path.TabIndex = 38;
-            this.image_path.Visible = false;
-            // 
             // Dish_edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(676, 435);
-            this.Controls.Add(this.image_path);
             this.Controls.Add(this.image);
             this.Controls.Add(this.category);
             this.Controls.Add(this.label6);
@@ -352,7 +307,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.id);
             this.Controls.Add(this.price);
             this.Controls.Add(this.descryption);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -374,7 +328,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
-        protected internal Guna.UI2.WinForms.Guna2TextBox id;
         protected internal Guna.UI2.WinForms.Guna2TextBox price;
         protected internal Guna.UI2.WinForms.Guna2TextBox descryption;
         private System.Windows.Forms.Label label5;
@@ -389,6 +342,5 @@
         private System.Windows.Forms.Label label6;
         public Guna.UI2.WinForms.Guna2ComboBox category;
         public System.Windows.Forms.PictureBox image;
-        protected internal Guna.UI2.WinForms.Guna2TextBox image_path;
     }
 }

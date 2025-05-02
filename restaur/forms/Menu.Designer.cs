@@ -43,14 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.search = new Guna.UI2.WinForms.Guna2TextBox();
             this.dg_menu = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.name_d = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -80,6 +72,14 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.name_d = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dg_menu)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -202,68 +202,6 @@
             this.dg_menu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dg_menu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dg_menu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_menu_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 30;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // image
-            // 
-            this.image.HeaderText = "Изображение";
-            this.image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.image.Name = "image";
-            this.image.ReadOnly = true;
-            // 
-            // name_d
-            // 
-            this.name_d.HeaderText = "Название";
-            this.name_d.Name = "name_d";
-            this.name_d.ReadOnly = true;
-            // 
-            // category
-            // 
-            this.category.HeaderText = "Категория";
-            this.category.Name = "category";
-            this.category.ReadOnly = true;
-            // 
-            // desc
-            // 
-            this.desc.HeaderText = "Описание";
-            this.desc.Name = "desc";
-            this.desc.ReadOnly = true;
-            // 
-            // price
-            // 
-            this.price.HeaderText = "Цена";
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            // 
-            // edit
-            // 
-            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.edit.FillWeight = 50F;
-            this.edit.HeaderText = "";
-            this.edit.Image = global::restaur.Properties.Resources.icons8_редактировать_32;
-            this.edit.MinimumWidth = 40;
-            this.edit.Name = "edit";
-            this.edit.ReadOnly = true;
-            this.edit.Width = 40;
-            // 
-            // delete
-            // 
-            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.delete.FillWeight = 50F;
-            this.delete.HeaderText = "";
-            this.delete.Image = global::restaur.Properties.Resources.icons8_удалить_32;
-            this.delete.MinimumWidth = 40;
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
-            this.delete.Width = 40;
             // 
             // guna2BorderlessForm2
             // 
@@ -705,6 +643,68 @@
             this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
             this.dataGridViewImageColumn4.ReadOnly = true;
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 30;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // image
+            // 
+            this.image.HeaderText = "Изображение";
+            this.image.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.image.Name = "image";
+            this.image.ReadOnly = true;
+            // 
+            // name_d
+            // 
+            this.name_d.HeaderText = "Название";
+            this.name_d.Name = "name_d";
+            this.name_d.ReadOnly = true;
+            // 
+            // category
+            // 
+            this.category.HeaderText = "Категория";
+            this.category.Name = "category";
+            this.category.ReadOnly = true;
+            // 
+            // desc
+            // 
+            this.desc.HeaderText = "Описание";
+            this.desc.Name = "desc";
+            this.desc.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.HeaderText = "Цена";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
+            // edit
+            // 
+            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.edit.FillWeight = 50F;
+            this.edit.HeaderText = "";
+            this.edit.Image = global::restaur.Properties.Resources.icons8_редактировать_32;
+            this.edit.MinimumWidth = 40;
+            this.edit.Name = "edit";
+            this.edit.ReadOnly = true;
+            this.edit.Width = 40;
+            // 
+            // delete
+            // 
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.delete.FillWeight = 50F;
+            this.delete.HeaderText = "";
+            this.delete.Image = global::restaur.Properties.Resources.icons8_удалить_32;
+            this.delete.MinimumWidth = 40;
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Width = 40;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -766,6 +766,10 @@
         private System.Windows.Forms.Label label4;
         public Guna.UI2.WinForms.Guna2TextBox search_category;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_c;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name_c;
+        private System.Windows.Forms.DataGridViewImageColumn edit1;
+        private System.Windows.Forms.DataGridViewImageColumn delete1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewImageColumn image;
         private System.Windows.Forms.DataGridViewTextBoxColumn name_d;
@@ -774,9 +778,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn price;
         private System.Windows.Forms.DataGridViewImageColumn edit;
         private System.Windows.Forms.DataGridViewImageColumn delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_c;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name_c;
-        private System.Windows.Forms.DataGridViewImageColumn edit1;
-        private System.Windows.Forms.DataGridViewImageColumn delete1;
     }
 }

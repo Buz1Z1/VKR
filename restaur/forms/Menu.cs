@@ -25,11 +25,18 @@ namespace restaur
             var cmd = new NpgsqlCommand("select d.id,d.image,d.name,c.name,d.descryption,price from dishes as d left join dish_category as c on d.category_id=c.id where d.name like '%" + search.Text + "%'", dB_Connect.conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             //Получение ответа от бд
-            while (reader.Read())
+            try
             {
+                while (reader.Read())
+                {
 
-                dg_menu.Rows.Add(reader[0].ToString(), Bitmap.FromFile(reader[1].ToString()),
-                    reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
+                    dg_menu.Rows.Add(reader[0].ToString(), Bitmap.FromFile(reader[1].ToString()),
+                        reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             cmd.Dispose();
             dB_Connect.closeConnect();
@@ -179,13 +186,13 @@ namespace restaur
 
                 cmd.Dispose();
                 Dish_edit edit = new Dish_edit();
-                edit.image_path.Text = dt.Rows[0]["image"].ToString();
+                edit.image_path = dt.Rows[0]["image"].ToString();
                 
                 edit.name.Text = dg.Rows[e.RowIndex].Cells["name_d"].Value.ToString();
                 edit.descryption.Text = dg.Rows[e.RowIndex].Cells["desc"].Value.ToString();
-                edit.image.Image =Bitmap.FromFile(edit.image_path.Text);
+                edit.image.Image =Bitmap.FromFile(edit.image_path);
                 edit.price.Text = dg.Rows[e.RowIndex].Cells["price"].Value.ToString();
-                edit.id.Text = dg.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                edit.id = Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value);
                 
                 //добавить заполнение категории блюд
                 cmd = new NpgsqlCommand("Select * from dish_category",dB_Connect.conn);
