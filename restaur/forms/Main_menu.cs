@@ -23,7 +23,6 @@ namespace restaur
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             label1.Text = "Меню";
-            
             AddControls(new Menu());
         }
 
@@ -35,6 +34,7 @@ namespace restaur
 
         private void AddControls(Form form)
         {
+            
             Center.Controls.Clear();
             form.Dock = DockStyle.Fill;
             form.TopLevel = false;

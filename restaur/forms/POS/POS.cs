@@ -134,12 +134,13 @@ namespace restaur.forms.POS
                 loadItems(dr[0].ToString(), dr[1].ToString(), dr[3].ToString(),dr[7].ToString(),
                 Bitmap.FromFile(dr[4].ToString()));
             }
-
+            cmd.Dispose();
             dB_Connect.closeConnect();
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             this.Close();
             Main_menu mm= new Main_menu();
             mm.Show();

@@ -20,6 +20,7 @@ namespace restaur.forms
         {
             InitializeComponent();
             draw_table();
+            fill_order();
         }
 
         public void draw_table()
@@ -101,7 +102,7 @@ namespace restaur.forms
         {
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
             if(folderBrowserDialog.ShowDialog() == DialogResult.OK)
-                ExportDatagrid(guna2DataGridView1,folderBrowserDialog.SelectedPath);
+                ExportDatagrid(order_prod,folderBrowserDialog.SelectedPath);
         }
 
         public void ExportDatagrid(DataGridView dg, string filePath)
@@ -142,15 +143,30 @@ namespace restaur.forms
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        // сделать автозаполение ингридиентов меньше минимального запаса
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void order_prod_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var dg = guna2DataGridView1;
+            var dg = order_prod;
             string colname = dg.Columns[e.ColumnIndex].Name;
-            if (colname == "del_or")
+            if (colname == "del_or" && dg.RowCount!=1 && dg.Rows[e.RowIndex].Index!=dg.RowCount-1)
             { 
                 dg.Rows.RemoveAt(dg.Rows[e.RowIndex].Index); //обработка нулевой строки
             }
+        }
+        private void fill_order()
+        {
+            dg_storage.Rows.Clear();
+            dB_Connect.openConnect();
+            var cmd = new NpgsqlCommand("select name, (min_count-count) as need from storage where count<min_count;", dB_Connect.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            //Получение ответа от бд
+            while (reader.Read())
+            {
+                order_prod.Rows.Add(reader[0], reader[1]);
+            }
+            cmd.Dispose();
+            dB_Connect.closeConnect();
+
         }
     }
 }

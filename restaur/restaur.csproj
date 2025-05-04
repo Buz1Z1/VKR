@@ -221,6 +221,12 @@
     <Compile Include="forms\Storage.Designer.cs">
       <DependentUpon>Storage.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\teh_editcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\teh_editcs.Designer.cs">
+      <DependentUpon>teh_editcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Add_emp.resx">
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Tables.resx">
       <DependentUpon>Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\teh_editcs.resx">
+      <DependentUpon>teh_editcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

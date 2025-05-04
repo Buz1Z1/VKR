@@ -15,6 +15,7 @@ namespace restaur
             InitializeComponent();
             draw_table();
             draw_rec();
+            fill_teh();
 
         }
         public void draw_table()
@@ -73,19 +74,19 @@ namespace restaur
         }
 
         //тех карты
-        private void fill_dish()
+        private void fill_teh()
         {
-            //guna2DataGridView1.Rows.Clear();
-            //dB_Connect.openConnect();
-            //var cmd = new NpgsqlCommand("SELECT id, name FROM dishes", dB_Connect.conn);
-            //NpgsqlDataReader reader = cmd.ExecuteReader();
-            ////Получение ответа от бд
-            //while (reader.Read())
-            //{
-            //    dish.Items.Add(reader["name"].ToString());
-            //}
-            //cmd.Dispose();
-            //dB_Connect.closeConnect();
+            teh_card.Rows.Clear();
+            dB_Connect.openConnect();
+            var cmd = new NpgsqlCommand("SELECT id, name FROM dishes where name like '%" + search_teh.Text + "%'", dB_Connect.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            //Получение ответа от бд
+            while (reader.Read())
+            {
+                teh_card.Rows.Add(reader["id"].ToString(), reader["name"].ToString());
+            }
+            cmd.Dispose();
+            dB_Connect.closeConnect();
         }
 
 
@@ -95,7 +96,7 @@ namespace restaur
         }
 
 
-        //катгория
+        //категория
         public void draw_rec()
         {
             dg_category.Rows.Clear();
@@ -106,7 +107,7 @@ namespace restaur
             while (reader.Read())
             {
 
-                dg_category.Rows.Add(reader["id"].ToString(),
+                dg_category.Rows.Add(reader["id"],
                     reader["name"].ToString());
             }
             cmd.Dispose();
@@ -229,6 +230,45 @@ namespace restaur
                         draw_rec();
                 }
             }
+        }
+
+        private void teh_card_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var dg = teh_card;
+            string colname = dg.Columns[e.ColumnIndex].Name;
+            if (colname == "teh_edit")
+            {
+                //var cmd = new NpgsqlCommand("select id, name, price from storage" + Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value), dB_Connect.conn);
+                //dB_Connect.openConnect();
+                //NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                //DataTable dt = new DataTable();
+                //da.Fill(dt);
+                //cmd.Dispose();
+                //dB_Connect.closeConnect();
+                teh_editcs t_e = new teh_editcs(1);
+                t_e.Show();
+                
+            }
+            if (colname == "delete")
+            {
+                if (MessageBox.Show("Уверены, что хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    var cmd = new NpgsqlCommand("", dB_Connect.conn);
+                    cmd.Parameters.AddWithValue("@id", Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value));
+                    dB_Connect.openConnect();
+                    NpgsqlDataReader reader = cmd.ExecuteReader();
+                    dB_Connect.closeConnect();
+                    cmd.Dispose();
+                    MessageBox.Show("Запись была удалена");
+                    if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
+                        draw_rec();
+                }
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
