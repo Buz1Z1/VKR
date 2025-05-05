@@ -150,3 +150,4 @@ D:\диплом\VKR\restaur\obj\Debug\restaur.csproj.CopyComplete
 D:\диплом\VKR\restaur\obj\Debug\restaur.exe
 D:\диплом\VKR\restaur\obj\Debug\restaur.pdb
 D:\диплом\VKR\restaur\obj\Debug\restaur.forms.teh_editcs.resources
+D:\диплом\VKR\restaur\obj\Debug\restaur.forms.Add_reserv.resources

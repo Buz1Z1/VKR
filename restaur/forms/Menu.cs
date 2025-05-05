@@ -37,9 +37,10 @@ namespace restaur
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                
             }
             cmd.Dispose();
+            reader.DisposeAsync();
             dB_Connect.closeConnect();
         }
         private void pictureBox1_Click(object sender, EventArgs e)

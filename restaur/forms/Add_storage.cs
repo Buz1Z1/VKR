@@ -15,6 +15,7 @@ namespace restaur.forms
 {
     public partial class Add_storage : Form
     {
+        input_check ic;
         public int id;
         DB_connect dB_Connect = new DB_connect();
         public Add_storage()
@@ -74,8 +75,8 @@ namespace restaur.forms
 
         private void count_KeyPress(object sender, KeyPressEventArgs e) //проверка на число
         {
-            if(!Char.IsDigit(e.KeyChar) && e.KeyChar!='.' && e.KeyChar != ',' && e.KeyChar!=(char)Keys.Back && e.KeyChar != (char)Keys.Delete)
-                e.Handled = true;
+            if (ic.isdigit(sender, e))
+                e.Handled=true;
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

@@ -126,8 +126,9 @@
             this.price.PasswordChar = '\0';
             this.price.PlaceholderText = "";
             this.price.SelectedText = "";
-            this.price.Size = new System.Drawing.Size(201, 29);
+            this.price.Size = new System.Drawing.Size(201, 30);
             this.price.TabIndex = 21;
+            this.price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.price_KeyPress);
             // 
             // descryption
             // 
@@ -141,7 +142,7 @@
             this.descryption.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.descryption.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.descryption.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.descryption.Location = new System.Drawing.Point(140, 203);
+            this.descryption.Location = new System.Drawing.Point(140, 191);
             this.descryption.Name = "descryption";
             this.descryption.PasswordChar = '\0';
             this.descryption.PlaceholderText = "";

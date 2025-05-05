@@ -33,7 +33,7 @@
             this.fio = new Guna.UI2.WinForms.Guna2TextBox();
             this.date_birth = new Guna.UI2.WinForms.Guna2TextBox();
             this.addres = new Guna.UI2.WinForms.Guna2TextBox();
-            this.passport = new Guna.UI2.WinForms.Guna2TextBox();
+            this.email = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -99,6 +99,7 @@
             this.date_birth.SelectedText = "";
             this.date_birth.Size = new System.Drawing.Size(201, 36);
             this.date_birth.TabIndex = 3;
+            this.date_birth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.salary_KeyPress);
             // 
             // addres
             // 
@@ -120,25 +121,25 @@
             this.addres.Size = new System.Drawing.Size(201, 36);
             this.addres.TabIndex = 4;
             // 
-            // passport
+            // email
             // 
-            this.passport.BorderRadius = 5;
-            this.passport.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passport.DefaultText = "";
-            this.passport.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.passport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.passport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passport.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passport.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passport.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.passport.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passport.Location = new System.Drawing.Point(403, 199);
-            this.passport.Name = "passport";
-            this.passport.PasswordChar = '\0';
-            this.passport.PlaceholderText = "";
-            this.passport.SelectedText = "";
-            this.passport.Size = new System.Drawing.Size(201, 36);
-            this.passport.TabIndex = 5;
+            this.email.BorderRadius = 5;
+            this.email.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.email.DefaultText = "";
+            this.email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.email.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.email.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.email.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.email.Location = new System.Drawing.Point(403, 199);
+            this.email.Name = "email";
+            this.email.PasswordChar = '\0';
+            this.email.PlaceholderText = "";
+            this.email.SelectedText = "";
+            this.email.Size = new System.Drawing.Size(201, 36);
+            this.email.TabIndex = 5;
             // 
             // label2
             // 
@@ -176,9 +177,9 @@
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(399, 176);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 20);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Паспортные данные";
+            this.label5.Text = "Email";
             // 
             // label6
             // 
@@ -250,6 +251,7 @@
             this.salary.SelectedText = "";
             this.salary.Size = new System.Drawing.Size(201, 36);
             this.salary.TabIndex = 15;
+            this.salary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.salary_KeyPress);
             // 
             // id
             // 
@@ -378,7 +380,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.passport);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.addres);
             this.Controls.Add(this.date_birth);
             this.Controls.Add(this.fio);
@@ -404,7 +406,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        protected internal Guna.UI2.WinForms.Guna2TextBox passport;
+        protected internal Guna.UI2.WinForms.Guna2TextBox email;
         protected internal Guna.UI2.WinForms.Guna2TextBox addres;
         protected internal Guna.UI2.WinForms.Guna2TextBox date_birth;
         protected internal Guna.UI2.WinForms.Guna2TextBox fio;

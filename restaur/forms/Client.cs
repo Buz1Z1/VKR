@@ -14,6 +14,7 @@ namespace restaur
 {
     public partial class Client : Form
     {
+        
         DB_connect dB_Connect = new DB_connect();
         public Client()
         {
@@ -65,7 +66,7 @@ namespace restaur
 
                 Add_client edit = new Add_client();
                 edit.fio.Text = dg.Rows[e.RowIndex].Cells["fio"].Value.ToString();
-                edit.id.Text = dg.Rows[e.RowIndex].Cells["id"].Value.ToString();
+                edit.id = Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value.ToString());
                 edit.email.Text = dg.Rows[e.RowIndex].Cells["email"].ToString();
                 edit.phone.Text = dg.Rows[e.RowIndex].Cells["phone"].ToString();
                 edit.card_num.Text = dg.Rows[e.RowIndex].Cells["card_num"].ToString();

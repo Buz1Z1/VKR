@@ -13,12 +13,6 @@ namespace restaur.forms
 {
     public partial class teh_editcs : Form
     {
-        //public class Product
-        //{
-        //    public int id { get; set; }
-        //    public string name { get; set; }
-        //    public double price { get; set; }
-        //}
         public int id_dish;
         DataTable dt_prod = new DataTable();
         
@@ -63,6 +57,10 @@ namespace restaur.forms
             if(dg_teh.Columns[e.ColumnIndex].Name == "name")
             {
                 //обработка стоимости
+                //int id = dg_teh.Rows[e.RowIndex].Index;
+                //dg_teh.
+                var selectedValue = dg_teh.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                MessageBox.Show($"Selected value: {selectedValue}");
             }
         }
     }

@@ -33,22 +33,12 @@ namespace restaur
             while (reader.Read())
             {
                 guna2DataGridView1.Rows.Add(reader["id"].ToString(), reader["fio"].ToString(), reader["birth"].ToString(),
-                    reader["addres"].ToString(), reader["passport"].ToString(), reader["phone"].ToString(),
+                    reader["addres"].ToString(), reader["email"].ToString(), reader["phone"].ToString(),
                     reader["job"].ToString(), reader["salary"].ToString());
             }
             cmd.Dispose();
             dB_Connect.closeConnect();
-            //string query = "SELECT * FROM employee where fio like '%" + search.Text + "%'";
-            //ListBox listBox = new ListBox();
-            //listBox.Items.Add(id);
-            //listBox.Items.Add(fio);
-            //listBox.Items.Add(birth);
-            //listBox.Items.Add(addres);
-            //listBox.Items.Add(passport);
-            //listBox.Items.Add(phone);
-            //listBox.Items.Add(salary);
-            //listBox.Items.Add(job);
-            //dB_Connect.LoadDG(guna2DataGridView1,listBox,query);
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -68,7 +58,7 @@ namespace restaur
                 edit.fio.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["fio"].Value.ToString();
                 edit.date_birth.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["birth"].Value.ToString();
                 edit.addres.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["addres"].Value.ToString();
-                edit.passport.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["passport"].Value.ToString();
+                edit.email.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["email"].Value.ToString();
                 edit.phone.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["phone"].Value.ToString();
                 edit.job.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["job"].Value.ToString();
                 edit.salary.Text = guna2DataGridView1.Rows[e.RowIndex].Cells["salary"].Value.ToString();

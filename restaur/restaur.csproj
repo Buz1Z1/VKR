@@ -136,6 +136,12 @@
     <Compile Include="forms\Add_storage.Designer.cs">
       <DependentUpon>Add_storage.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\Add_reserv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Add_reserv.Designer.cs">
+      <DependentUpon>Add_reserv.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\Add_table.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,7 @@
     <Compile Include="forms\teh_editcs.Designer.cs">
       <DependentUpon>teh_editcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="input_check.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Add_emp.resx">
@@ -240,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Add_storage.resx">
       <DependentUpon>Add_storage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Add_reserv.resx">
+      <DependentUpon>Add_reserv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\Add_table.resx">
       <DependentUpon>Add_table.cs</DependentUpon>

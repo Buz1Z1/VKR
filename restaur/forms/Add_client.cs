@@ -13,6 +13,8 @@ namespace restaur.forms
 {
     public partial class Add_client : Form
     {
+        input_check i_c = new input_check();
+        public int id;
         DB_connect dB_Connect = new DB_connect();
         Client client= new Client();
         public Add_client()
@@ -24,7 +26,7 @@ namespace restaur.forms
             try
             {
                 var cmd = new NpgsqlCommand("update client set fio=@fio,d_birth=@d_birth,email=@email,phone=@phone," +
-                    "care_num=@card_num,bonus=@bonus,d_create=@d_create)", dB_Connect.conn);
+                    "care_num=@card_num,bonus=@bonus,d_create=@d_create where id=@id", dB_Connect.conn);
                 cmd.Parameters.AddWithValue("@fio", fio.Text);
                 cmd.Parameters.AddWithValue("@email", email.Text);
                 cmd.Parameters.AddWithValue("@phone", phone.Text);
@@ -32,7 +34,7 @@ namespace restaur.forms
                 cmd.Parameters.AddWithValue("@card_num", card_num.Text);
                 cmd.Parameters.AddWithValue("@d_birth", DateTime.Parse(date_birth.Text));
                 cmd.Parameters.AddWithValue("@d_create", DateTime.Parse(d_create.Text));
-
+                cmd.Parameters.AddWithValue("@id", id);
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
@@ -73,6 +75,12 @@ namespace restaur.forms
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void date_birth_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (i_c.isdigit(sender, e))
+                e.Handled = true;
         }
     }
 }

@@ -35,16 +35,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.job = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.search = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +42,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.birth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.job = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salary = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,7 +89,7 @@
             this.fio,
             this.birth,
             this.addres,
-            this.passport,
+            this.email,
             this.phone,
             this.job,
             this.salary,
@@ -135,93 +135,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
-            // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 30;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 30;
-            // 
-            // fio
-            // 
-            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.fio.HeaderText = "ФИО";
-            this.fio.MinimumWidth = 120;
-            this.fio.Name = "fio";
-            this.fio.ReadOnly = true;
-            // 
-            // birth
-            // 
-            this.birth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.birth.HeaderText = "Дата рождения";
-            this.birth.Name = "birth";
-            this.birth.ReadOnly = true;
-            this.birth.Width = 107;
-            // 
-            // addres
-            // 
-            this.addres.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.addres.HeaderText = "Адрес";
-            this.addres.Name = "addres";
-            this.addres.ReadOnly = true;
-            this.addres.Width = 65;
-            // 
-            // passport
-            // 
-            this.passport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.passport.HeaderText = "Паспортные данные";
-            this.passport.Name = "passport";
-            this.passport.ReadOnly = true;
-            this.passport.Width = 132;
-            // 
-            // phone
-            // 
-            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.phone.HeaderText = "Телефон";
-            this.phone.Name = "phone";
-            this.phone.ReadOnly = true;
-            this.phone.Width = 79;
-            // 
-            // job
-            // 
-            this.job.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.job.HeaderText = "Должность";
-            this.job.Name = "job";
-            this.job.ReadOnly = true;
-            this.job.Width = 95;
-            // 
-            // salary
-            // 
-            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.salary.HeaderText = "Оклад";
-            this.salary.Name = "salary";
-            this.salary.ReadOnly = true;
-            this.salary.Width = 66;
-            // 
-            // edit
-            // 
-            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.edit.FillWeight = 50F;
-            this.edit.HeaderText = "";
-            this.edit.Image = global::restaur.Properties.Resources.icons8_редактировать_32;
-            this.edit.MinimumWidth = 40;
-            this.edit.Name = "edit";
-            this.edit.ReadOnly = true;
-            this.edit.Width = 40;
-            // 
-            // delete
-            // 
-            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.delete.FillWeight = 50F;
-            this.delete.HeaderText = "";
-            this.delete.Image = global::restaur.Properties.Resources.icons8_удалить_32;
-            this.delete.MinimumWidth = 40;
-            this.delete.Name = "delete";
-            this.delete.ReadOnly = true;
-            this.delete.Width = 40;
             // 
             // search
             // 
@@ -305,6 +218,93 @@
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.ReadOnly = true;
             // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 30;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 30;
+            // 
+            // fio
+            // 
+            this.fio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fio.HeaderText = "ФИО";
+            this.fio.MinimumWidth = 120;
+            this.fio.Name = "fio";
+            this.fio.ReadOnly = true;
+            // 
+            // birth
+            // 
+            this.birth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.birth.HeaderText = "Дата рождения";
+            this.birth.Name = "birth";
+            this.birth.ReadOnly = true;
+            this.birth.Width = 107;
+            // 
+            // addres
+            // 
+            this.addres.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.addres.HeaderText = "Адрес";
+            this.addres.Name = "addres";
+            this.addres.ReadOnly = true;
+            this.addres.Width = 65;
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.email.HeaderText = "Почта";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.Width = 65;
+            // 
+            // phone
+            // 
+            this.phone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.phone.HeaderText = "Телефон";
+            this.phone.Name = "phone";
+            this.phone.ReadOnly = true;
+            this.phone.Width = 79;
+            // 
+            // job
+            // 
+            this.job.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.job.HeaderText = "Должность";
+            this.job.Name = "job";
+            this.job.ReadOnly = true;
+            this.job.Width = 95;
+            // 
+            // salary
+            // 
+            this.salary.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.salary.HeaderText = "Оклад";
+            this.salary.Name = "salary";
+            this.salary.ReadOnly = true;
+            this.salary.Width = 66;
+            // 
+            // edit
+            // 
+            this.edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.edit.FillWeight = 50F;
+            this.edit.HeaderText = "";
+            this.edit.Image = global::restaur.Properties.Resources.icons8_редактировать_32;
+            this.edit.MinimumWidth = 40;
+            this.edit.Name = "edit";
+            this.edit.ReadOnly = true;
+            this.edit.Width = 40;
+            // 
+            // delete
+            // 
+            this.delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.delete.FillWeight = 50F;
+            this.delete.HeaderText = "";
+            this.delete.Image = global::restaur.Properties.Resources.icons8_удалить_32;
+            this.delete.MinimumWidth = 40;
+            this.delete.Name = "delete";
+            this.delete.ReadOnly = true;
+            this.delete.Width = 40;
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -342,7 +342,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fio;
         private System.Windows.Forms.DataGridViewTextBoxColumn birth;
         private System.Windows.Forms.DataGridViewTextBoxColumn addres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn job;
         private System.Windows.Forms.DataGridViewTextBoxColumn salary;

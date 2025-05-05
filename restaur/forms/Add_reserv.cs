@@ -13,12 +13,11 @@ using System.Windows.Forms;
 
 namespace restaur.forms
 {
-    public partial class Add_table : Form
+    public partial class Add_reserv : Form
     {
-        input_check i_c = new input_check();
         public int id;
         DB_connect dB_Connect =new DB_connect();
-        public Add_table()
+        public Add_reserv()
         {
             InitializeComponent();
         }
@@ -27,17 +26,19 @@ namespace restaur.forms
         {
             try
             {
-                var cmd = new NpgsqlCommand("UPDATE tables SET name=@name where id=@id", dB_Connect.conn);
-                cmd.Parameters.AddWithValue("@name", name.Text);
-                cmd.Parameters.AddWithValue("@id", Convert.ToInt16(id));
+                var cmd = new NpgsqlCommand("UPDATE reserv SET id_table=@id_table, descr=@descr, time=@time, date=@date where id=@id", dB_Connect.conn);
+                cmd.Parameters.AddWithValue("@id_table", Convert.ToInt16(tables.SelectedIndex));
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@time", time.Text);
+                cmd.Parameters.AddWithValue("@date", date.Value.ToShortDateString());
+                cmd.Parameters.AddWithValue("@descr", descr.Text);
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
                 MessageBox.Show("Успех");
-                name.Text = "";
                 Tables tab = new Tables();
                 if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                    tab.draw_table();
+                    
                 this.Close();
                 
 
@@ -52,15 +53,16 @@ namespace restaur.forms
         {
             try
             {
-                var cmd = new NpgsqlCommand("INSERT into tables (name) values(@name)", dB_Connect.conn);
-                cmd.Parameters.AddWithValue("@name", name.Text);
+                var cmd = new NpgsqlCommand("INSERT into reserv (id_table,descr,time,date) values(@id_table,@descr,@time,@date)", dB_Connect.conn);
+                cmd.Parameters.AddWithValue("@id_table", Convert.ToInt16(tables.SelectedIndex));
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@time", time.Text);
+                cmd.Parameters.AddWithValue("@date", date.Value.ToString());
+                cmd.Parameters.AddWithValue("@descr", descr.Text);
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
-                name.Text = "";
-                Tables tab= new Tables();
                 if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                    tab.draw_table();
                 this.Close();
             }
             catch (Exception ex)

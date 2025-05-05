@@ -40,36 +40,20 @@ namespace restaur.forms
             gunaChart1.YAxes.Display = true;
             gunaChart1.XAxes.Display = true;
             gunaChart1.Datasets.Add(dataset);
-            //dataset.Container.Dispose();
+            
         }
 
-        //private void count_dishes()
-        //{ 
-        //    gunaChart2.Datasets.Clear();
-        //    var dataset= new GunaBarDataset();
-        //    dB_Connect.openConnect();
-        //    string date = guna2DateTimePicker1.Value.ToShortDateString();
-        //    var cmd = new NpgsqlCommand("select dd.name, sum(od.count) from order_detail od " +
-        //        "join dishes dd on dd.id=od.id_dish \r\njoin orders oo on oo.id=od.id_order " +
-        //        "where oo.date='"+date+"' group by oo.date, od.id_dish, dd.name ", dB_Connect.conn);
-        //    NpgsqlDataReader reader = cmd.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        dataset.DataPoints.Add(reader[0].ToString(), double.Parse(reader[1].ToString()));
-        //    }
-        //    cmd.Dispose();
-        //    dB_Connect.closeConnect();
-        //}
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             gunaChart2.Datasets.Clear();
             var dataset = new GunaBarDataset();
             dB_Connect.openConnect();
-            string date = dateTimePicker1.Value.ToShortDateString();
+            string date1 = dateTimePicker1.Value.ToShortDateString();
+            string date2 = dateTimePicker4.Value.ToShortDateString();
             var cmd = new NpgsqlCommand("select dd.name, sum(od.count) from order_detail od " +
-                "join dishes dd on dd.id=od.id_dish \r\njoin orders oo on oo.id=od.id_order " +
-                "where oo.date='" + date + "' group by oo.date, od.id_dish, dd.name ", dB_Connect.conn);
+                "join dishes dd on dd.id=od.id_dish join orders oo on oo.id=od.id_order " +
+                "where CAST(oo.date as DATE) between '"+date1+ "' and '" + date2 + "' group by dd.name", dB_Connect.conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -80,6 +64,50 @@ namespace restaur.forms
             gunaChart2.YAxes.Display = true;
             gunaChart2.XAxes.Display = true;
             gunaChart2.Datasets.Add(dataset);
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            gunaChart3.Datasets.Clear();
+            double total=0;
+            var dataset = new GunaBarDataset();
+            dB_Connect.openConnect();
+            string date1 = dateTimePicker2.Value.ToShortDateString();
+            string date2 = dateTimePicker3.Value.ToShortDateString();
+            var cmd = new NpgsqlCommand("select o.date, sum(o.sum) from orders o where CAST(o.date as DATE) between '" + date1 + "' and '" + date2 + "' group by o.date", dB_Connect.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                dataset.DataPoints.Add(reader[0].ToString(), double.Parse(reader[1].ToString()));
+                total += double.Parse(reader[1].ToString());
+            }
+            cmd.Dispose();
+            dB_Connect.closeConnect();
+            gunaChart3.YAxes.Display = true;
+            gunaChart3.XAxes.Display = true;
+            gunaChart3.Datasets.Add(dataset);
+            label5.Text = total.ToString();
+        }
+
+        private void dateTimePicker5_ValueChanged(object sender, EventArgs e)
+        {
+            gunaChart4.Datasets.Clear();
+            var dataset = new GunaBarDataset();
+            dB_Connect.openConnect();
+            string date1 = dateTimePicker5.Value.ToShortDateString();
+            string date2 = dateTimePicker6.Value.ToShortDateString();
+            var cmd = new NpgsqlCommand("select e.fio, count(o.id_emp) from orders o join employee e on o.id_emp=e.id" +
+                " where CAST(date as DATE) between '" + date1 + "' and '" + date2 + "' group by e.fio", dB_Connect.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                dataset.DataPoints.Add(reader[0].ToString(), double.Parse(reader[1].ToString()));
+            }
+            cmd.Dispose();
+            dB_Connect.closeConnect();
+            gunaChart4.YAxes.Display = true;
+            gunaChart4.XAxes.Display = true;
+            gunaChart4.Datasets.Add(dataset);
         }
     }
 

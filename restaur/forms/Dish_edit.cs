@@ -13,6 +13,7 @@ namespace restaur
 {
     public partial class Dish_edit : Form
     {
+        input_check i_c=new input_check();
         DB_connect dB_Connect = new DB_connect();
         public string image_path;
         public int id;
@@ -40,6 +41,7 @@ namespace restaur
                 if (dialog.ShowDialog() == DialogResult.OK)
                 {
                     image.ImageLocation = dialog.FileName;
+                    image_path=dialog.FileName;
                 }
             }
             catch (Exception ex)
@@ -108,6 +110,12 @@ namespace restaur
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (i_c.isdigit(sender, e))
+                e.Handled = true;
         }
     }
 }

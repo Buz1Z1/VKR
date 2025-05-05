@@ -32,7 +32,6 @@
             this.btn_update = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.id = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.phone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -90,27 +89,6 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
             // 
-            // id
-            // 
-            this.id.BorderRadius = 5;
-            this.id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.id.DefaultText = "";
-            this.id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id.Location = new System.Drawing.Point(62, 430);
-            this.id.Name = "id";
-            this.id.PasswordChar = '\0';
-            this.id.PlaceholderText = "";
-            this.id.SelectedText = "";
-            this.id.Size = new System.Drawing.Size(201, 36);
-            this.id.TabIndex = 36;
-            this.id.Visible = false;
-            // 
             // btn_save
             // 
             this.btn_save.BorderRadius = 5;
@@ -158,6 +136,7 @@
             this.phone.SelectedText = "";
             this.phone.Size = new System.Drawing.Size(201, 36);
             this.phone.TabIndex = 32;
+            this.phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.date_birth_KeyPress);
             // 
             // label6
             // 
@@ -208,6 +187,7 @@
             this.date_birth.SelectedText = "";
             this.date_birth.Size = new System.Drawing.Size(201, 36);
             this.date_birth.TabIndex = 24;
+            this.date_birth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.date_birth_KeyPress);
             // 
             // fio
             // 
@@ -368,7 +348,6 @@
             this.Controls.Add(this.email);
             this.Controls.Add(this.label_em);
             this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.id);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.phone);
@@ -393,7 +372,6 @@
         public Guna.UI2.WinForms.Guna2Button btn_update;
         public System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        protected internal Guna.UI2.WinForms.Guna2TextBox id;
         public Guna.UI2.WinForms.Guna2Button btn_save;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         protected internal Guna.UI2.WinForms.Guna2TextBox phone;
