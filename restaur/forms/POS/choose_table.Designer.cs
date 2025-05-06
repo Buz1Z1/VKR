@@ -111,6 +111,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "choose_table";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "choose_table";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

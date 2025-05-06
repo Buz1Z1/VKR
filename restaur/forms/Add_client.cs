@@ -26,7 +26,7 @@ namespace restaur.forms
             try
             {
                 var cmd = new NpgsqlCommand("update client set fio=@fio,d_birth=@d_birth,email=@email,phone=@phone," +
-                    "care_num=@card_num,bonus=@bonus,d_create=@d_create where id=@id", dB_Connect.conn);
+                    "card_num=@card_num,bonus=@bonus,d_create=@d_create where id=@id", dB_Connect.conn);
                 cmd.Parameters.AddWithValue("@fio", fio.Text);
                 cmd.Parameters.AddWithValue("@email", email.Text);
                 cmd.Parameters.AddWithValue("@phone", phone.Text);

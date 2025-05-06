@@ -113,19 +113,17 @@ namespace restaur.forms
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            dB_Connect.openConnect();
             Add_reserv edit = new Add_reserv();
             var cmd = new NpgsqlCommand("Select * from tables", dB_Connect.conn);
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            da = new NpgsqlDataAdapter(cmd);
-            dt = new DataTable();
-            da.Fill(dt);
             cmd.Dispose();
             dB_Connect.closeConnect();
             edit.btn_save.Enabled = true;
             edit.btn_save.Visible = true;
-
+            edit.label1.Text = "Добавить бронь";
             edit.btn_update.Enabled = false;
             edit.btn_update.Visible = false;
             edit.tables.DisplayMember = "name";
@@ -138,23 +136,22 @@ namespace restaur.forms
         private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colname = guna2DataGridView2.Columns[e.ColumnIndex].Name;
-            if (colname == "edit")
+            if (colname == "edit_res")
             {
                 Add_reserv edit = new Add_reserv();
                 edit.label1.Text = "Изменить";
                 edit.descr.Text = guna2DataGridView2.Rows[e.RowIndex].Cells["descr"].Value.ToString();
-                edit.id = Convert.ToInt16(guna2DataGridView2.Rows[e.RowIndex].Cells["id"].Value);
+                edit.id = Convert.ToInt16(guna2DataGridView2.Rows[e.RowIndex].Cells["id_r"].Value);
                 edit.time.Text=guna2DataGridView2.Rows[e.RowIndex].Cells["time"].Value.ToString();
                 edit.date.Value=Convert.ToDateTime(guna2DataGridView2.Rows[e.RowIndex].Cells["date"].Value);
-
+                dB_Connect.openConnect();
                 var cmd = new NpgsqlCommand("Select * from tables", dB_Connect.conn);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                da = new NpgsqlDataAdapter(cmd);
-                dt = new DataTable();
-                da.Fill(dt);
                 cmd.Dispose();
+                dB_Connect.closeConnect();
+                edit.label1.Text = "Редактирвоание брони";
                 edit.tables.DisplayMember = "name";
                 edit.tables.ValueMember = "id";
                 edit.tables.SelectedIndex = -1;
@@ -166,13 +163,13 @@ namespace restaur.forms
                 edit.btn_update.Visible = true;
                 edit.ShowDialog();
             }
-            if (colname == "delete")
+            if (colname == "del_res")
             {
                 if (MessageBox.Show("Уверены, что хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
 
                     var cmd = new NpgsqlCommand("DELETE FROM reserv where id = @id", dB_Connect.conn);
-                    cmd.Parameters.AddWithValue("@id", Convert.ToInt16(guna2DataGridView2.Rows[e.RowIndex].Cells["id"].Value));
+                    cmd.Parameters.AddWithValue("@id", Convert.ToInt16(guna2DataGridView2.Rows[e.RowIndex].Cells["id_r"].Value));
                     dB_Connect.openConnect();
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     dB_Connect.closeConnect();

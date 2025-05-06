@@ -21,7 +21,7 @@ namespace restaur.forms.POS
         public POS()
         {
             InitializeComponent();
-            
+            this.WindowState= FormWindowState.Maximized;
         }
 
         private void loadCategory()
@@ -42,21 +42,16 @@ namespace restaur.forms.POS
                 all.Size = new Size(160, 45);
                 all.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
                 all.Text = "Все";
-                
                 all.Click += new EventHandler(all_cat_Click);
                 all.Margin = new Padding(2, 5, 2, 5);
                 category_panel.Controls.Add(all);
                 foreach (DataRow dr in dt.Rows)
                 {
                     Guna.UI2.WinForms.Guna2Button button = new Guna.UI2.WinForms.Guna2Button();
-                    //добавляем кнопки для категорий
                     button.FillColor = Color.FromArgb(55, 99, 101);
                     button.Size = new Size(160, 45);
-                    //button.Location=
                     button.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
                     button.Text = dr["name"].ToString();
-                    //button.Dock = DockStyle.Top;
-
                     button.Click += new EventHandler(choose);
                     button.Margin=new Padding(2,5,2,5);
                     category_panel.Controls.Add(button);

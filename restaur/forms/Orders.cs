@@ -21,9 +21,12 @@ namespace restaur
         }
         public void fill_data()
         {
-            guna2DataGridView1.Rows.Clear();
+            dg_orders.Rows.Clear();
             dB_Connect.openConnect();
-            var cmd = new NpgsqlCommand("SELECT * FROM orders", dB_Connect.conn);
+            var cmd = new NpgsqlCommand("select CAST(o.date as DATE),o.time, c.fio, t.name,o.sum,e.fio from orders o " +
+                "left join client c on c.id=o.id_client " +
+                "left join tables t on t.id=o.id_table " +
+                "left join employee e on e.id=o.id_emp", dB_Connect.conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             //DataTable dt = new DataTable();
             //dt.Load(reader);
@@ -32,7 +35,9 @@ namespace restaur
             while (reader.Read())
             {
 
-                guna2DataGridView1.Rows.Add(reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString());
+                dg_orders.Rows.Add(reader[0].ToString(), reader[1].ToString(),
+                    reader[2].ToString(), reader[3].ToString(),
+                    reader[4].ToString(), reader[5].ToString());
             }
             cmd.Dispose();
             dB_Connect.closeConnect();

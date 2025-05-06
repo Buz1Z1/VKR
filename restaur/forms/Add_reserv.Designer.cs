@@ -78,7 +78,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(420, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(444, 12);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 0;
@@ -108,7 +108,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(477, 63);
+            this.guna2Panel1.Size = new System.Drawing.Size(501, 63);
             this.guna2Panel1.TabIndex = 37;
             // 
             // guna2BorderlessForm1
@@ -144,6 +144,7 @@
             this.descr.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.descr.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.descr.Location = new System.Drawing.Point(192, 121);
+            this.descr.Multiline = true;
             this.descr.Name = "descr";
             this.descr.PasswordChar = '\0';
             this.descr.PlaceholderText = "";
@@ -220,7 +221,7 @@
             // Add_reserv
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(477, 438);
+            this.ClientSize = new System.Drawing.Size(501, 438);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

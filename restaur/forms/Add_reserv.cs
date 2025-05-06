@@ -27,7 +27,7 @@ namespace restaur.forms
             try
             {
                 var cmd = new NpgsqlCommand("UPDATE reserv SET id_table=@id_table, descr=@descr, time=@time, date=@date where id=@id", dB_Connect.conn);
-                cmd.Parameters.AddWithValue("@id_table", Convert.ToInt16(tables.SelectedIndex));
+                cmd.Parameters.AddWithValue("@id_table", Convert.ToInt16(tables.SelectedValue));
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@time", time.Text);
                 cmd.Parameters.AddWithValue("@date", date.Value.ToShortDateString());
@@ -35,13 +35,12 @@ namespace restaur.forms
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
-                MessageBox.Show("Успех");
                 Tables tab = new Tables();
                 if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                    
+                {
+                    tab.draw_reserv();
+                }
                 this.Close();
-                
-
             }
             catch (Exception ex)
             {
@@ -54,15 +53,19 @@ namespace restaur.forms
             try
             {
                 var cmd = new NpgsqlCommand("INSERT into reserv (id_table,descr,time,date) values(@id_table,@descr,@time,@date)", dB_Connect.conn);
-                cmd.Parameters.AddWithValue("@id_table", Convert.ToInt16(tables.SelectedIndex));
+                cmd.Parameters.AddWithValue("@id_table", Convert.ToInt16(tables.SelectedValue));
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@time", time.Text);
-                cmd.Parameters.AddWithValue("@date", date.Value.ToString());
+                cmd.Parameters.AddWithValue("@date", date.Value.ToShortDateString());
                 cmd.Parameters.AddWithValue("@descr", descr.Text);
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
+                Tables tab = new Tables();
                 if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
+                {
+                    tab.draw_reserv();
+                }
                 this.Close();
             }
             catch (Exception ex)

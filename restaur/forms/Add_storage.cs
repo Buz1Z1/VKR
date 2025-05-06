@@ -37,11 +37,9 @@ namespace restaur.forms
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
-                //clear_form();
-                //Menu menu = new Menu();
-                //if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                //    menu.draw_table();
-
+                Storage storage = new Storage();
+                if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
+                    storage.draw_table();
                 this.Close();
             }
             catch (Exception ex)
@@ -62,10 +60,10 @@ namespace restaur.forms
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
-                //clear_form();
-                //Menu menu = new Menu();
-                //if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                //    menu.draw_table();
+
+                Storage storage = new Storage();
+                if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
+                    storage.draw_table();
                 this.Close();
             }
             catch (Exception ex)

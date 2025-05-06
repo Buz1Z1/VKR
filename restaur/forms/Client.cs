@@ -52,7 +52,7 @@ namespace restaur
             add_Client.label1.Text = "Создать клиента";
             add_Client.btn_save.Enabled = true;
             add_Client.btn_save.Visible = true;
-
+            add_Client.d_create.Text = DateTime.Now.ToShortDateString();
             add_Client.btn_update.Enabled = false;
             add_Client.btn_update.Visible = false;
         }
@@ -67,18 +67,15 @@ namespace restaur
                 Add_client edit = new Add_client();
                 edit.fio.Text = dg.Rows[e.RowIndex].Cells["fio"].Value.ToString();
                 edit.id = Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                edit.email.Text = dg.Rows[e.RowIndex].Cells["email"].ToString();
-                edit.phone.Text = dg.Rows[e.RowIndex].Cells["phone"].ToString();
-                edit.card_num.Text = dg.Rows[e.RowIndex].Cells["card_num"].ToString();
-                edit.date_birth.Text= dg.Rows[e.RowIndex].Cells["birth"].ToString();
-                edit.bonus.Text = dg.Rows[e.RowIndex].Cells["bonus"].ToString();
-                edit.d_create.Text = dg.Rows[e.RowIndex].Cells["date_create"].ToString();
-
+                edit.email.Text = dg.Rows[e.RowIndex].Cells["email"].Value.ToString();
+                edit.phone.Text = dg.Rows[e.RowIndex].Cells["phone"].Value.ToString();
+                edit.card_num.Text = dg.Rows[e.RowIndex].Cells["card_num"].Value.ToString();
+                edit.date_birth.Text= dg.Rows[e.RowIndex].Cells["birth"].Value.ToString();
+                edit.bonus.Text = dg.Rows[e.RowIndex].Cells["bonus"].Value.ToString();
+                edit.d_create.Text = dg.Rows[e.RowIndex].Cells["date_create"].Value.ToString();
                 edit.label1.Text = "Редактировать клиента";
-                
                 edit.btn_save.Enabled = false;
                 edit.btn_save.Visible = false;
-
                 edit.btn_update.Enabled = true;
                 edit.btn_update.Visible = true;
                 edit.ShowDialog();
@@ -94,6 +91,7 @@ namespace restaur
                     dB_Connect.closeConnect();
                     cmd.Dispose();
                     MessageBox.Show("Запись была удалена");
+                    draw_table();
                 }
             }
         }

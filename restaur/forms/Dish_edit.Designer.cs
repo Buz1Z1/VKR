@@ -248,7 +248,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(505, 273);
+            this.pictureBox1.Location = new System.Drawing.Point(514, 258);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 34);
             this.pictureBox1.TabIndex = 32;
@@ -312,7 +312,7 @@
             this.Controls.Add(this.descryption);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dish_edit";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dish_edit";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

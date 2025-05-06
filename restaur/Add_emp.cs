@@ -83,7 +83,7 @@ namespace restaur
             var cmd = new NpgsqlCommand("update employee SET fio=@fio,birth=@birth,addres=@addres,email=@email,phone=@phone,job=@job,salary=@salary WHERE id =@id", dB_Connect.conn);
             cmd.Parameters.AddWithValue("@id", Convert.ToInt16(id.Text));
             cmd.Parameters.AddWithValue("@fio", fio.Text);
-            cmd.Parameters.AddWithValue("@birth", b);
+            cmd.Parameters.AddWithValue("@birth", b.ToShortDateString());
             cmd.Parameters.AddWithValue("@addres", addres.Text);
             cmd.Parameters.AddWithValue("@email", email.Text);
             cmd.Parameters.AddWithValue("@phone", phone.Text);

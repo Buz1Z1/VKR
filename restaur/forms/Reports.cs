@@ -27,7 +27,7 @@ namespace restaur.forms
             var dataset = new GunaLineDataset();
             //Заполнение таблицы
             dB_Connect.openConnect();
-            var cmd = new NpgsqlCommand("select date, count(*) from orders group by date order by date ASC;", dB_Connect.conn);
+            var cmd = new NpgsqlCommand("select CAST(date as DATE), count(*) from orders group by CAST(date as DATE) order by CAST(date as DATE) ASC;", dB_Connect.conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             //Получение ответа от бд
             while (reader.Read())
@@ -37,6 +37,7 @@ namespace restaur.forms
             cmd.Dispose();
             dB_Connect.closeConnect();
             gunaChart1.Title.Text = "Количество заказов";
+            gunaChart1.Legend.Display = false;
             gunaChart1.YAxes.Display = true;
             gunaChart1.XAxes.Display = true;
             gunaChart1.Datasets.Add(dataset);
@@ -63,6 +64,7 @@ namespace restaur.forms
             dB_Connect.closeConnect();
             gunaChart2.YAxes.Display = true;
             gunaChart2.XAxes.Display = true;
+            gunaChart2.Legend.Display = false;
             gunaChart2.Datasets.Add(dataset);
         }
 
@@ -85,6 +87,7 @@ namespace restaur.forms
             dB_Connect.closeConnect();
             gunaChart3.YAxes.Display = true;
             gunaChart3.XAxes.Display = true;
+            gunaChart3.Legend.Display = false;
             gunaChart3.Datasets.Add(dataset);
             label5.Text = total.ToString();
         }
@@ -107,6 +110,7 @@ namespace restaur.forms
             dB_Connect.closeConnect();
             gunaChart4.YAxes.Display = true;
             gunaChart4.XAxes.Display = true;
+            gunaChart4.Legend.Display = false;
             gunaChart4.Datasets.Add(dataset);
         }
     }
