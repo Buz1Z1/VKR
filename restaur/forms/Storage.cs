@@ -19,8 +19,9 @@ namespace restaur.forms
         public Storage()
         {
             InitializeComponent();
-            draw_table();
+            
             fill_order();
+            draw_table();
         }
 
         public void draw_table()
@@ -33,10 +34,23 @@ namespace restaur.forms
             //Получение ответа от бд
             while (reader.Read())
             {
-                dg_storage.Rows.Add(reader[0], reader[1], reader[2], reader[3], reader[4], reader[5]);
+                dg_storage.Rows.Add(reader[0], reader[1], reader[2], reader[3], reader[4], reader[5], reader[6]);
             }
+            alert();
             cmd.Dispose();
             dB_Connect.closeConnect();
+        }
+        private void alert()
+        {
+            for(int i=0;i<dg_storage.RowCount;i++)
+            {
+                DateTime dt = Convert.ToDateTime(dg_storage.Rows[i].Cells["date"].Value.ToString());
+                dt=dt.AddDays(Convert.ToInt16(dg_storage.Rows[i].Cells["exp_date"].Value.ToString()));
+                if (dt < DateTime.UtcNow)
+                    dg_storage.Rows[i].Cells["date"].Style= new DataGridViewCellStyle { ForeColor=Color.Red };
+                else
+                    dg_storage.Rows[i].Cells["date"].Style= dg_storage.DefaultCellStyle;
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -68,6 +82,7 @@ namespace restaur.forms
                 add_Storage.price.Text = dg.Rows[e.RowIndex].Cells["price"].Value.ToString();
                 add_Storage.count.Text = dg.Rows[e.RowIndex].Cells["rest"].Value.ToString();
                 add_Storage.min_count.Text = dg.Rows[e.RowIndex].Cells["limit"].Value.ToString();
+                add_Storage.exp_date.Text= dg.Rows[e.RowIndex].Cells["exp_date"].Value.ToString();
                 add_Storage.btn_save.Enabled = false;
                 add_Storage.btn_save.Visible = false;
 
@@ -150,14 +165,15 @@ namespace restaur.forms
             string colname = dg.Columns[e.ColumnIndex].Name;
             if (colname == "del_or" && dg.RowCount!=1 && dg.Rows[e.RowIndex].Index!=dg.RowCount-1)
             { 
-                dg.Rows.RemoveAt(dg.Rows[e.RowIndex].Index); //обработка нулевой строки
+                dg.Rows.RemoveAt(dg.Rows[e.RowIndex].Index);
             }
         }
         private void fill_order()
         {
             dg_storage.Rows.Clear();
             dB_Connect.openConnect();
-            var cmd = new NpgsqlCommand("select name, (min_count-count) as need from storage where count<min_count;", dB_Connect.conn);
+            var cmd = new NpgsqlCommand("select name, CASE WHEN (min_count-count)>=0 then (min_count-count) ELSE min_count END from storage where count<min_count or " +
+                "CAST(date as DATE)+exp_date < current_date;", dB_Connect.conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             //Получение ответа от бд
             while (reader.Read())

@@ -235,11 +235,11 @@ namespace restaur
                 //da.Fill(dt);
                 //cmd.Dispose();
                 //dB_Connect.closeConnect();
-                teh_editcs t_e = new teh_editcs(1);
+                teh_editcs t_e = new teh_editcs();
                 t_e.Show();
                 
             }
-            if (colname == "delete")
+            if (colname == "delete")// поменять
             {
                 if (MessageBox.Show("Уверены, что хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -258,7 +258,8 @@ namespace restaur
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-
+            teh_editcs teh_Editcs = new teh_editcs();
+            teh_Editcs.Show();
         }
     }
 }

@@ -44,6 +44,8 @@
             this.min_count = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_update = new Guna.UI2.WinForms.Guna2Button();
             this.btn_save = new Guna.UI2.WinForms.Guna2Button();
+            this.exp_date = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,7 +130,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(147, 272);
+            this.label5.Location = new System.Drawing.Point(147, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 41;
@@ -156,7 +158,7 @@
             this.price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.price.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.price.Location = new System.Drawing.Point(241, 272);
+            this.price.Location = new System.Drawing.Point(241, 242);
             this.price.Name = "price";
             this.price.PasswordChar = '\0';
             this.price.PlaceholderText = "";
@@ -169,7 +171,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(136, 147);
+            this.label3.Location = new System.Drawing.Point(136, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 44;
@@ -187,7 +189,7 @@
             this.count.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.count.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.count.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.count.Location = new System.Drawing.Point(241, 147);
+            this.count.Location = new System.Drawing.Point(241, 138);
             this.count.Name = "count";
             this.count.PasswordChar = '\0';
             this.count.PlaceholderText = "";
@@ -200,7 +202,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(29, 207);
+            this.label4.Location = new System.Drawing.Point(29, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 20);
             this.label4.TabIndex = 45;
@@ -218,7 +220,7 @@
             this.min_count.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.min_count.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.min_count.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.min_count.Location = new System.Drawing.Point(241, 207);
+            this.min_count.Location = new System.Drawing.Point(241, 187);
             this.min_count.Name = "min_count";
             this.min_count.PasswordChar = '\0';
             this.min_count.PlaceholderText = "";
@@ -261,11 +263,44 @@
             this.btn_save.Text = "Сохранить";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
+            // exp_date
+            // 
+            this.exp_date.BorderRadius = 5;
+            this.exp_date.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.exp_date.DefaultText = "";
+            this.exp_date.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.exp_date.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.exp_date.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.exp_date.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.exp_date.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.exp_date.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.exp_date.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.exp_date.Location = new System.Drawing.Point(241, 289);
+            this.exp_date.Name = "exp_date";
+            this.exp_date.PasswordChar = '\0';
+            this.exp_date.PlaceholderText = "";
+            this.exp_date.SelectedText = "";
+            this.exp_date.Size = new System.Drawing.Size(201, 29);
+            this.exp_date.TabIndex = 49;
+            this.exp_date.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.count_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(68, 289);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(162, 20);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Срок годности в днях";
+            // 
             // Add_storage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 422);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.exp_date);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.min_count);
@@ -304,5 +339,7 @@
         public Guna.UI2.WinForms.Guna2TextBox name;
         public Guna.UI2.WinForms.Guna2TextBox price;
         public Guna.UI2.WinForms.Guna2TextBox min_count;
+        private System.Windows.Forms.Label label6;
+        public Guna.UI2.WinForms.Guna2TextBox exp_date;
     }
 }

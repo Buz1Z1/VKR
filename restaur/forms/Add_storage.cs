@@ -15,7 +15,7 @@ namespace restaur.forms
 {
     public partial class Add_storage : Form
     {
-        input_check ic;
+        input_check ic=new input_check();
         public int id;
         DB_connect dB_Connect = new DB_connect();
         public Add_storage()
@@ -27,13 +27,15 @@ namespace restaur.forms
         {
             try
             {
-                var cmd = new NpgsqlCommand("update storage set name=@name,min_count=@min_count,count=@count,price=@price where id=@id", dB_Connect.conn);
+                var cmd = new NpgsqlCommand("update storage set name=@name,min_count=@min_count," +
+                    "count=@count,price=@price, date=@date, exp_date=@exp_date where id=@id", dB_Connect.conn);
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Parameters.AddWithValue("@name", name.Text);
                 cmd.Parameters.AddWithValue("@min_count", double.Parse(min_count.Text));
                 cmd.Parameters.AddWithValue("@count", double.Parse(count.Text));
                 cmd.Parameters.AddWithValue("@price", double.Parse(price.Text));
                 cmd.Parameters.AddWithValue("@date", DateTime.UtcNow.ToShortDateString());
+                cmd.Parameters.AddWithValue("@exp_date", int.Parse(exp_date.Text));
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
@@ -50,13 +52,14 @@ namespace restaur.forms
         {
             try
             {
-                var cmd = new NpgsqlCommand("insert into storage (name,min_count,count,price,date) values(@name,@min_count,@count,@price,@date) ", dB_Connect.conn);
+                var cmd = new NpgsqlCommand("insert into storage (name,min_count,count,price,date,exp_date) values(@name,@min_count,@count,@price,@date,@exp_date) ", dB_Connect.conn);
                 
                 cmd.Parameters.AddWithValue("@name", name.Text);
                 cmd.Parameters.AddWithValue("@min_count", double.Parse(min_count.Text));
                 cmd.Parameters.AddWithValue("@count", double.Parse(count.Text));
                 cmd.Parameters.AddWithValue("@price", double.Parse(price.Text));
                 cmd.Parameters.AddWithValue("@date", DateTime.UtcNow.ToShortDateString());
+                cmd.Parameters.AddWithValue("@exp_date", int.Parse(exp_date.Text));
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();

@@ -15,24 +15,43 @@ namespace restaur.forms
     {
         public int id_dish;
         DataTable dt_prod = new DataTable();
-        
+        List<Product> list = new List<Product>();
+        class Product
+        {
+            public int id { get; set; }
+            public string name { get; set; }
+            public double price { get; set; }
+        }
+
         DB_connect dB_Connect = new DB_connect();
-        public teh_editcs(int id_dish)
+        public teh_editcs()
         {
             InitializeComponent();
             fill_table_prod();
-            fill_teh(id_dish);
+            fill_teh();
         }
         private void fill_table_prod()
         {
             dB_Connect.openConnect();
             var cmd = new NpgsqlCommand("select id, name, price from storage", dB_Connect.conn);
-            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-            da.Fill(dt_prod);
+            //NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            //Получение ответа от бд
+            while (reader.Read())
+            {
+                Product product = new Product();
+                product.id = Convert.ToInt16(reader["id"].ToString());
+                product.name = reader["name"].ToString();
+                product.price = Convert.ToDouble(reader["price"].ToString());
+                list.Add(product);
+            }
             cmd.Dispose();
+            dB_Connect.closeConnect();
+            //da.Fill(dt_prod);
+            //cmd.Dispose();
         }
 
-        public void fill_teh(int id_dish)
+        public void fill_teh()
         {
             //dB_Connect.openConnect();
             //var cmd = new NpgsqlCommand("select name, price from storage where id_dish=@id_dish", dB_Connect.conn);
@@ -40,9 +59,10 @@ namespace restaur.forms
 
             //NpgsqlDataReader reader = cmd.ExecuteReader();
             var combobox = (DataGridViewComboBoxColumn)dg_teh.Columns[1];
+            combobox.DataSource = list;
             combobox.DisplayMember = "name";
             combobox.ValueMember = "id";
-            combobox.DataSource = dt_prod;
+            //combobox.DataSource = list;
             
             //cmd.Dispose();
         }
@@ -62,6 +82,11 @@ namespace restaur.forms
                 var selectedValue = dg_teh.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                 MessageBox.Show($"Selected value: {selectedValue}");
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,7 +38,6 @@ namespace restaur.forms.POS
             foreach (DataRow dr in dt.Rows)
             {
                 Guna.UI2.WinForms.Guna2Button button = new Guna.UI2.WinForms.Guna2Button();
-                //добавляем кнопки для категорий
                 button.FillColor = Color.FromArgb(55, 99, 101);
                 button.Size = new Size(160, 45);
                 //button.Location=

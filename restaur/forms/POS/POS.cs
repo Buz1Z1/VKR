@@ -16,12 +16,12 @@ namespace restaur.forms.POS
     {
         DB_connect dB_Connect = new DB_connect();
 
-        int id_table=0;
-        int id_emp=0;
+        int id_client=0;
+        
         public POS()
         {
             InitializeComponent();
-            this.WindowState= FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void loadCategory()
@@ -146,6 +146,33 @@ namespace restaur.forms.POS
             products.Controls.Clear();
             loadProducts();
             loadCategory();
+            loadTabWaiter();
+        }
+
+        private void loadTabWaiter()
+        {
+            var cmd = new NpgsqlCommand("Select * from tables", dB_Connect.conn);
+            dB_Connect.openConnect();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            cmd.Dispose();
+            
+            choose_table.DisplayMember = "name";
+            choose_table.ValueMember = "id";
+            choose_table.SelectedIndex = -1;
+            choose_table.DataSource = dt;
+
+            cmd = new NpgsqlCommand("select id, fio from employee where job='Официант'", dB_Connect.conn);
+            da = new NpgsqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+            cmd.Dispose();
+            dB_Connect.closeConnect();
+            choose_waiter.DisplayMember = "fio";
+            choose_waiter.ValueMember = "id";
+            choose_waiter.SelectedIndex = -1;
+            choose_waiter.DataSource = dt;
         }
 
         private void search_TextChanged(object sender, EventArgs e)
@@ -174,16 +201,23 @@ namespace restaur.forms.POS
             }
             
         }
-
-        private void new_order_Click(object sender, EventArgs e)
+        private void clear()
         {
-            t_ofic.Text="" ;
+            t_ofic.Text = "";
             t_table.Text = "";
             dg_order.Rows.Clear();
+            choose_table.SelectedIndex = -1;
+            choose_waiter.SelectedIndex = -1;
             Total_sum.Text = "0.0";
-            
+            id_client = 0;
+            label8.Text = "";
+            label9.Text = "";
+            guna2TextBox1.Clear();
         }
-
+        private void new_order_Click(object sender, EventArgs e)
+        {
+            clear();            
+        }
 
         private void Create_order_Click(object sender, EventArgs e)
         {
@@ -193,10 +227,17 @@ namespace restaur.forms.POS
                 var cmd = new NpgsqlCommand("INSERT into orders (date,id_client,id_table,sum,id_emp,time) values (@date,@id_client,@id_table,@sum,@id_emp,@time) RETURNING id;", dB_Connect.conn);
                 cmd.Parameters.AddWithValue("@date", DateTime.Now.ToShortDateString());
                 cmd.Parameters.AddWithValue("@time", DateTime.Now.ToShortTimeString());
-                cmd.Parameters.AddWithValue("@id_client", id_table);//добавить обработку клиента и стола
+                cmd.Parameters.AddWithValue("@id_client", id_client);
                 cmd.Parameters.AddWithValue("@sum", Convert.ToDouble(Total_sum.Text));
-                cmd.Parameters.AddWithValue("@id_table", id_table);
-                cmd.Parameters.AddWithValue("id_emp", id_emp);
+                if(Convert.ToInt16(choose_table.SelectedValue)==-1)
+                    cmd.Parameters.AddWithValue("@id_table", 0);
+                else
+                    cmd.Parameters.AddWithValue("@id_table", Convert.ToInt16(choose_table.SelectedValue));
+
+                if (Convert.ToInt16(choose_waiter.SelectedValue) == -1)
+                    cmd.Parameters.AddWithValue("@id_emp", 0);
+                else
+                    cmd.Parameters.AddWithValue("@id_emp", Convert.ToInt16(choose_waiter.SelectedValue));
                 dB_Connect.openConnect();
                 int reader = (int)cmd.ExecuteScalar();
 
@@ -212,15 +253,52 @@ namespace restaur.forms.POS
                 cmd = new NpgsqlCommand(querry, dB_Connect.conn);
                 NpgsqlDataReader ww = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
+                cmd.Dispose();
+                if (id_client != 0)
+                {
+                    dB_Connect.openConnect();
+                    double plusbonus = Convert.ToDouble(Total_sum.Text) * 0.05;
+                    cmd = new NpgsqlCommand("update client set bonus=bonus+" + plusbonus.ToString(), dB_Connect.conn);
+                    NpgsqlDataReader ss = cmd.ExecuteReader();
+                    cmd.Dispose();
+                    dB_Connect.closeConnect();
+                }
+                clear();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            t_ofic.Text="" ;
-            t_table.Text = "";
-            dg_order.Rows.Clear();
-            Total_sum.Text = "0.0";
+            
+        }
+
+        private void create_client_Click(object sender, EventArgs e)
+        {
+            Add_client add_Client = new Add_client();
+            add_Client.Show();
+            add_Client.label1.Text = "Создать клиента";
+            add_Client.btn_save.Enabled = true;
+            add_Client.btn_save.Visible = true;
+            add_Client.d_create.Text = DateTime.Now.ToShortDateString();
+            add_Client.btn_update.Enabled = false;
+            add_Client.btn_update.Visible = false;
+        }
+
+        private void choose_clint_Click(object sender, EventArgs e)
+        {
+            dB_Connect.openConnect();
+            var cmd = new NpgsqlCommand("select id,fio,bonus from client where card_num='"+guna2TextBox1.Text+"';", dB_Connect.conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                label8.Text = reader["fio"].ToString();
+                label9.Text = reader["bonus"].ToString();
+                id_client = Convert.ToInt16(reader["id"]);
+            }
+            dB_Connect.closeConnect();
+            reader.DisposeAsync();
+            cmd.Dispose();
+            
         }
     }
 }
