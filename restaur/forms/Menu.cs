@@ -4,7 +4,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-
+using System.IO;
 namespace restaur
 {
     public partial class Menu : Form
@@ -31,8 +31,12 @@ namespace restaur
             {
                 while (reader.Read())
                 {
-                    dg_menu.Rows.Add(reader[0].ToString(), Image.FromFile(reader[1].ToString()),
+                    byte[] imageData = File.ReadAllBytes(reader[1].ToString());
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        dg_menu.Rows.Add(reader[0].ToString(), Image.FromStream(ms),
                         reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
+                    }
                 }
             }
             catch(Exception ex)
@@ -236,22 +240,22 @@ namespace restaur
                 //cmd.Dispose();
                 //dB_Connect.closeConnect();
                 teh_editcs t_e = new teh_editcs();
+                t_e.id_dish = Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id_dish"].Value.ToString());
                 t_e.Show();
                 
             }
-            if (colname == "delete")// поменять
+            if (colname == "dteh_del")
             {
                 if (MessageBox.Show("Уверены, что хотите удалить запись?", "Удаление", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    var cmd = new NpgsqlCommand("", dB_Connect.conn);
+                    var cmd = new NpgsqlCommand("delete from teh_card where id=@id", dB_Connect.conn);
                     cmd.Parameters.AddWithValue("@id", Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value));
                     dB_Connect.openConnect();
                     NpgsqlDataReader reader = cmd.ExecuteReader();
                     dB_Connect.closeConnect();
                     cmd.Dispose();
                     MessageBox.Show("Запись была удалена");
-                    if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                        draw_rec();
+                    draw_rec();
                 }
             }
         }

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace restaur.forms.POS
 {
     public partial class POS : Form
@@ -126,8 +126,13 @@ namespace restaur.forms.POS
             da.Fill(dt);
             foreach( DataRow dr in dt.Rows)
             {
-                loadItems(dr[0].ToString(), dr[1].ToString(), dr[3].ToString(),dr[7].ToString(),
-                Bitmap.FromFile(dr[4].ToString()));
+                byte[] imageData = File.ReadAllBytes(dr[4].ToString());
+                using (MemoryStream ms =new MemoryStream(imageData))
+                {
+                    loadItems(dr[0].ToString(), dr[1].ToString(), dr[3].ToString(), dr[7].ToString(),
+                    Image.FromStream(ms));
+                }
+
             }
             cmd.Dispose();
             dB_Connect.closeConnect();

@@ -21,6 +21,7 @@ namespace restaur.forms
             public int id { get; set; }
             public string name { get; set; }
             public double price { get; set; }
+            
         }
 
         DB_connect dB_Connect = new DB_connect();
@@ -74,19 +75,61 @@ namespace restaur.forms
 
         private void dg_teh_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if(dg_teh.Columns[e.ColumnIndex].Name == "name")
-            {
-                //обработка стоимости
-                //int id = dg_teh.Rows[e.RowIndex].Index;
-                //dg_teh.
-                var selectedValue = dg_teh.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                MessageBox.Show($"Selected value: {selectedValue}");
-            }
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
+            double total = 0;
+            for(int i=0;i<dg_teh.RowCount-1;i++)
+            {
+                int id = Convert.ToInt16(dg_teh.Rows[i].Cells[0].Value.ToString());
+                Product pp = list.First(p => p.id == id);
+                total += pp.price * double.Parse(dg_teh.Rows[i].Cells[2].Value.ToString());
+            }
+            total_price.Text = total.ToString();
+        }
+
+        private void dg_teh_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if(e.Control is ComboBox)
+            {
+                (e.Control as ComboBox).SelectedValueChanged -= cb_SelectedValueChanged;                             
+                (e.Control as ComboBox).SelectedValueChanged += cb_SelectedValueChanged;
+            }
+        }
+        private void cb_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var ind = dg_teh.CurrentCellAddress;
+                if (!(sender is ComboBox comboBox) || comboBox.SelectedValue == null)
+                    return;
+                var aa = (sender as ComboBox).SelectedValue.ToString();
+                DataGridViewTextBoxCell cel = (DataGridViewTextBoxCell)dg_teh.Rows[ind.Y].Cells[0];
+                cel.Value = aa.ToString();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            string querry = "INSERT into teh_card (id_dish,id_prod,weight) values ";
+            for (int i = 0; i < dg_teh.RowCount - 1; i++)
+            {
+                querry += "(" +id_dish.ToString()+ ", " + dg_teh.Rows[i].Cells["id"].Value.ToString() + ", " + double.Parse(dg_teh.Rows[i].Cells["weight"].Value.ToString()) + "),";
+            }//ошибка в формировании строки
+            querry = querry.Remove(querry.Length - 1, 1);
+            querry += ";";
+            dB_Connect.openConnect();
+            var cmd = new NpgsqlCommand(querry, dB_Connect.conn);
+            NpgsqlDataReader ww = cmd.ExecuteReader();
+            dB_Connect.closeConnect();
         }
     }
 }
