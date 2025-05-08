@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.total_price = new System.Windows.Forms.Label();
@@ -48,8 +49,6 @@
             this.product = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_update = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_save = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,9 +93,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 21);
+            this.label1.Size = new System.Drawing.Size(128, 17);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Редактор тех карты";
+            this.label1.Text = "Редактор тех карты ";
             // 
             // guna2Button6
             // 
@@ -116,7 +115,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btn_update);
             this.panel1.Controls.Add(this.btn_save);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.panel3);
@@ -126,6 +124,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(179, 390);
             this.panel1.TabIndex = 5;
+            // 
+            // btn_save
+            // 
+            this.btn_save.BorderRadius = 5;
+            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(99)))), ((int)(((byte)(101)))));
+            this.btn_save.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_save.ForeColor = System.Drawing.Color.White;
+            this.btn_save.Location = new System.Drawing.Point(29, 333);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(121, 45);
+            this.btn_save.TabIndex = 41;
+            this.btn_save.Text = "Сохранить";
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // guna2Button1
             // 
@@ -242,6 +257,7 @@
             this.dg_teh.ThemeStyle.RowsStyle.Height = 50;
             this.dg_teh.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dg_teh.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dg_teh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_teh_CellContentClick);
             this.dg_teh.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_teh_CellValueChanged);
             this.dg_teh.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dg_teh_EditingControlShowing);
             // 
@@ -271,39 +287,6 @@
             this.delete.MinimumWidth = 40;
             this.delete.Name = "delete";
             this.delete.Width = 40;
-            // 
-            // btn_update
-            // 
-            this.btn_update.BorderRadius = 5;
-            this.btn_update.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_update.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_update.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_update.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(99)))), ((int)(((byte)(101)))));
-            this.btn_update.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_update.ForeColor = System.Drawing.Color.White;
-            this.btn_update.Location = new System.Drawing.Point(29, 282);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(121, 45);
-            this.btn_update.TabIndex = 42;
-            this.btn_update.Text = "Изменить";
-            // 
-            // btn_save
-            // 
-            this.btn_save.BorderRadius = 5;
-            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_save.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(99)))), ((int)(((byte)(101)))));
-            this.btn_save.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_save.ForeColor = System.Drawing.Color.White;
-            this.btn_save.Location = new System.Drawing.Point(29, 333);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(121, 45);
-            this.btn_save.TabIndex = 41;
-            this.btn_save.Text = "Сохранить";
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // teh_editcs
             // 
@@ -338,14 +321,13 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewComboBoxColumn product;
         private System.Windows.Forms.DataGridViewTextBoxColumn weight;
         private System.Windows.Forms.DataGridViewImageColumn delete;
-        public Guna.UI2.WinForms.Guna2Button btn_update;
         public Guna.UI2.WinForms.Guna2Button btn_save;
+        public System.Windows.Forms.Label label1;
     }
 }

@@ -50,6 +50,10 @@ namespace restaur.forms
                     dg_storage.Rows[i].Cells["date"].Style= new DataGridViewCellStyle { ForeColor=Color.Red };
                 else
                     dg_storage.Rows[i].Cells["date"].Style= dg_storage.DefaultCellStyle;
+                if(Convert.ToDouble(dg_storage.Rows[i].Cells["rest"].Value) < Convert.ToDouble(dg_storage.Rows[i].Cells["limit"].Value))
+                    dg_storage.Rows[i].Cells["rest"].Style = new DataGridViewCellStyle { ForeColor = Color.Red };
+                else
+                    dg_storage.Rows[i].Cells["rest"].Style = dg_storage.DefaultCellStyle;
             }
         }
 

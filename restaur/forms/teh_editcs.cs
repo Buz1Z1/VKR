@@ -119,17 +119,33 @@ namespace restaur.forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            string querry = "INSERT into teh_card (id_dish,id_prod,weight) values ";
+            var cmd = new NpgsqlCommand("delete from teh_card where id_dish=@id_dish", dB_Connect.conn);
+            cmd.Parameters.AddWithValue("@id_dish", id_dish);
+            dB_Connect.openConnect();
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            dB_Connect.closeConnect();
+            cmd.Dispose();
             for (int i = 0; i < dg_teh.RowCount - 1; i++)
             {
-                querry += "(" +id_dish.ToString()+ ", " + dg_teh.Rows[i].Cells["id"].Value.ToString() + ", " + double.Parse(dg_teh.Rows[i].Cells["weight"].Value.ToString()) + "),";
-            }//ошибка в формировании строки
-            querry = querry.Remove(querry.Length - 1, 1);
-            querry += ";";
-            dB_Connect.openConnect();
-            var cmd = new NpgsqlCommand(querry, dB_Connect.conn);
-            NpgsqlDataReader ww = cmd.ExecuteReader();
-            dB_Connect.closeConnect();
+                cmd = new NpgsqlCommand("INSERT into teh_card (id_dish,id_prod,weight) values (@id_dish,@id_prod, @weight) ", dB_Connect.conn);
+                cmd.Parameters.AddWithValue("@id_dish", id_dish);
+                cmd.Parameters.AddWithValue("@id_prod", Convert.ToInt16(dg_teh.Rows[i].Cells["id"].Value));
+                cmd.Parameters.AddWithValue("@weight", Convert.ToDouble(dg_teh.Rows[i].Cells["weight"].Value));
+                dB_Connect.openConnect();
+                NpgsqlDataReader ww = cmd.ExecuteReader();
+                dB_Connect.closeConnect();
+            }
+            MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK);
+            this.Close();
+        }
+
+        private void dg_teh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colname = dg_teh.Columns[e.ColumnIndex].Name;
+            if (colname == "delete" && dg_teh.RowCount != 1 && dg_teh.Rows[e.RowIndex].Index != dg_teh.RowCount - 1)
+            {
+                dg_teh.Rows.RemoveAt(dg_teh.Rows[e.RowIndex].Index);
+            }
         }
     }
 }

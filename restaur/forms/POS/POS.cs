@@ -248,22 +248,26 @@ namespace restaur.forms.POS
 
                 //заполнение деталей заказа
                 cmd.Parameters.Clear();
-                string querry = "INSERT into order_detail (id_order,id_dish,count) values ";
-                foreach (DataGridViewRow i in dg_order.Rows)
-                {
-                    querry += "(" + reader.ToString() + ", " + i.Cells["id"].Value.ToString() + ", " + i.Cells["quantity"].Value.ToString() + "),";
-                }
-                querry = querry.Remove(querry.Length - 1, 1);
-                querry += ";";
-                cmd = new NpgsqlCommand(querry, dB_Connect.conn);
-                NpgsqlDataReader ww = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
-                cmd.Dispose();
+                //string querry = "INSERT into order_detail (id_order,id_dish,count) values ";
+                for (int i=0;i< dg_order.Rows.Count;i++)
+                {
+                    dB_Connect.openConnect();
+                    var querry = new NpgsqlCommand("INSERT into order_detail (id_order,id_dish,count) values (@id_order,@id_dish,@count)", dB_Connect.conn);
+                    querry.Parameters.AddWithValue("@id_order",reader);
+                    querry.Parameters.AddWithValue("@id_dish", Convert.ToInt16(dg_order.Rows[i].Cells["id"].Value));
+                    querry.Parameters.AddWithValue("@count", Convert.ToInt16(dg_order.Rows[i].Cells["quantity"].Value));
+                    NpgsqlDataReader ww = querry.ExecuteReader();
+                    dB_Connect.closeConnect();
+                    querry.Dispose();
+
+                }
+
                 if (id_client != 0)
                 {
                     dB_Connect.openConnect();
                     double plusbonus = Convert.ToDouble(Total_sum.Text) * 0.05;
-                    cmd = new NpgsqlCommand("update client set bonus=bonus+" + plusbonus.ToString(), dB_Connect.conn);
+                    cmd = new NpgsqlCommand("update client set bonus=bonus+" + plusbonus.ToString()+" where id="+id_client, dB_Connect.conn);
                     NpgsqlDataReader ss = cmd.ExecuteReader();
                     cmd.Dispose();
                     dB_Connect.closeConnect();

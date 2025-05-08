@@ -232,15 +232,9 @@ namespace restaur
             string colname = dg.Columns[e.ColumnIndex].Name;
             if (colname == "teh_edit")
             {
-                //var cmd = new NpgsqlCommand("select id, name, price from storage" + Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id"].Value), dB_Connect.conn);
-                //dB_Connect.openConnect();
-                //NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-                //DataTable dt = new DataTable();
-                //da.Fill(dt);
-                //cmd.Dispose();
-                //dB_Connect.closeConnect();
                 teh_editcs t_e = new teh_editcs();
                 t_e.id_dish = Convert.ToInt16(dg.Rows[e.RowIndex].Cells["id_dish"].Value.ToString());
+                t_e.label1.Text += dg.Rows[e.RowIndex].Cells["name_prod"].Value.ToString();
                 t_e.Show();
                 
             }
