@@ -39,7 +39,7 @@ namespace restaur.forms
                 }
                 dB_Connect.closeConnect();
                 cmd.Dispose();
-                gunaChart1.Title.Text = "Количество заказов";
+                //gunaChart1.Title.Text = "Количество заказов";
                 gunaChart1.Legend.Display = false;
                 gunaChart1.YAxes.Display = true;
                 gunaChart1.XAxes.Display = true;
@@ -93,7 +93,7 @@ namespace restaur.forms
                 var dataset = new GunaBarDataset();
                 string date1 = dateTimePicker2.Value.ToShortDateString();
                 string date2 = dateTimePicker3.Value.ToShortDateString();
-                var cmd = new NpgsqlCommand("select o.date, sum(o.sum) from orders o where CAST(o.date as DATE) between '" + date1 + "' and '" + date2 + "' group by o.date", dB_Connect.conn);
+                var cmd = new NpgsqlCommand("select o.date, sum(o.sum) from orders o where CAST(o.date as DATE) between '" + date1 + "' and '" + date2 + "' group by o.date order by CAST(o.date as DATE) ASC", dB_Connect.conn);
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 

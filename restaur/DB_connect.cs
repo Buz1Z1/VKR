@@ -12,7 +12,7 @@ namespace restaur
     //Класс для подключения к базе данных
     internal class DB_connect
     {
-        internal NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=restaurant;User Id=postgres;Password=step;");
+        internal NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=test;User Id=postgres;Password=step;");
         internal NpgsqlConnection getConnect
         {
             get { return conn; }
