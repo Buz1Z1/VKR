@@ -35,9 +35,7 @@ namespace restaur.forms
         {
             dB_Connect.openConnect();
             var cmd = new NpgsqlCommand("select id, name, price from storage", dB_Connect.conn);
-            //NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
             NpgsqlDataReader reader = cmd.ExecuteReader();
-            //Получение ответа от бд
             while (reader.Read())
             {
                 Product product = new Product();
@@ -48,24 +46,15 @@ namespace restaur.forms
             }
             cmd.Dispose();
             dB_Connect.closeConnect();
-            //da.Fill(dt_prod);
-            //cmd.Dispose();
+            
         }
 
         public void fill_teh()
         {
-            //dB_Connect.openConnect();
-            //var cmd = new NpgsqlCommand("select name, price from storage where id_dish=@id_dish", dB_Connect.conn);
-            //cmd.Parameters.AddWithValue("@id_dish",id_dish);
-
-            //NpgsqlDataReader reader = cmd.ExecuteReader();
             var combobox = (DataGridViewComboBoxColumn)dg_teh.Columns[1];
             combobox.DataSource = list;
             combobox.DisplayMember = "name";
             combobox.ValueMember = "id";
-            //combobox.DataSource = list;
-            
-            //cmd.Dispose();
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)

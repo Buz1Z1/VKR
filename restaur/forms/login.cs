@@ -31,27 +31,16 @@ namespace restaur
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            //Авторизация
-
-            //Подключение к бд
             db.openConnect();
-
-            //Получение ввода пользователя
             string login =guna2TextBox2.Text;
             string password=guna2TextBox1.Text;
 
-            //Формирование строки sql команды
             var cmd = new NpgsqlCommand("SELECT * FROM users WHERE login = @login and pass = @pass", db.conn);
             cmd.Parameters.AddWithValue("login", login);
             cmd.Parameters.AddWithValue("pass", password);
-            //Исполнение команды
             NpgsqlDataReader reader = cmd.ExecuteReader();
-
-            //Получение ответа от бд
-            DataTable dt = new DataTable();
+DataTable dt = new DataTable();
             dt.Load(reader);
-            
-            //Проверка
             if (dt.Rows.Count > 0)
             {
                 this.Hide();

@@ -47,8 +47,10 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Center = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.Center.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -283,9 +285,8 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(50, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 20);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Добро пожаловать";
             // 
             // guna2ControlBox3
             // 
@@ -329,11 +330,22 @@
             // 
             // Center
             // 
+            this.Center.Controls.Add(this.label2);
             this.Center.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Center.Location = new System.Drawing.Point(210, 47);
             this.Center.Name = "Center";
             this.Center.Size = new System.Drawing.Size(990, 645);
             this.Center.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(47, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(302, 40);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Добро пожаловать!";
             // 
             // Main_menu
             // 
@@ -354,6 +366,8 @@
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.Center.ResumeLayout(false);
+            this.Center.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -378,5 +392,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button btn_POS;
         private System.Windows.Forms.Label date_time;
+        private System.Windows.Forms.Label label2;
     }
 }

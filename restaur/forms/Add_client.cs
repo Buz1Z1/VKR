@@ -32,8 +32,8 @@ namespace restaur.forms
                 cmd.Parameters.AddWithValue("@phone", phone.Text);
                 cmd.Parameters.AddWithValue("@bonus", Convert.ToInt32(bonus.Text));
                 cmd.Parameters.AddWithValue("@card_num", card_num.Text);
-                cmd.Parameters.AddWithValue("@d_birth", DateTime.Parse(date_birth.Text));
-                cmd.Parameters.AddWithValue("@d_create", DateTime.Parse(d_create.Text));
+                cmd.Parameters.AddWithValue("@d_birth", date_birth.Text);
+                cmd.Parameters.AddWithValue("@d_create", d_create.Text);
                 cmd.Parameters.AddWithValue("@id", id);
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
@@ -59,8 +59,8 @@ namespace restaur.forms
                 cmd.Parameters.AddWithValue("@phone",phone.Text);
                 cmd.Parameters.AddWithValue("@bonus", Convert.ToInt32(bonus.Text));
                 cmd.Parameters.AddWithValue("@card_num", card_num.Text);
-                cmd.Parameters.AddWithValue("@d_birth", DateTime.Parse(date_birth.Text));
-                cmd.Parameters.AddWithValue("@d_create", DateTime.Today);
+                cmd.Parameters.AddWithValue("@d_birth", date_birth.Text);
+                cmd.Parameters.AddWithValue("@d_create", DateTime.Today.ToShortDateString());
 
                 dB_Connect.openConnect();
                 NpgsqlDataReader reader = cmd.ExecuteReader();
