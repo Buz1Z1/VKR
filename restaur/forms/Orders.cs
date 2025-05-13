@@ -23,15 +23,11 @@ namespace restaur
         {
             dg_orders.Rows.Clear();
             dB_Connect.openConnect();
-            var cmd = new NpgsqlCommand("select CAST(o.date as DATE),o.time, c.fio, t.name,o.sum,e.fio from orders o " +
+            var cmd = new NpgsqlCommand("select o.date,o.time, c.fio, t.name,o.sum,e.fio from orders o " +
                 "left join client c on c.id=o.id_client " +
                 "left join tables t on t.id=o.id_table " +
-                "left join employee e on e.id=o.id_emp", dB_Connect.conn);
+                "left join employee e on e.id=o.id_emp order by CAST(o.date as DATE) DESC", dB_Connect.conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
-            //DataTable dt = new DataTable();
-            //dt.Load(reader);
-            //guna2DataGridView1.DataSource = dt;
-            //Получение ответа от бд
             while (reader.Read())
             {
 

@@ -27,19 +27,16 @@ namespace restaur.forms
             {
                 gunaChart1.Datasets.Clear();
                 var dataset = new GunaLineDataset();
-                //Заполнение таблицы
                 dB_Connect.openConnect();
-                var cmd = new NpgsqlCommand("select CAST(date as DATE), count(*) from orders group by CAST(date as DATE) order by CAST(date as DATE) ASC;", dB_Connect.conn);
+                var cmd = new NpgsqlCommand("select date, count(*) from orders group by date order by CAST(date as DATE) ASC;", dB_Connect.conn);
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 
-                //Получение ответа от бд
                 while (reader.Read())
                 {
                     dataset.DataPoints.Add(reader[0].ToString(), double.Parse(reader[1].ToString()));
                 }
                 dB_Connect.closeConnect();
                 cmd.Dispose();
-                //gunaChart1.Title.Text = "Количество заказов";
                 gunaChart1.Legend.Display = false;
                 gunaChart1.YAxes.Display = true;
                 gunaChart1.XAxes.Display = true;
@@ -140,6 +137,4 @@ namespace restaur.forms
             gunaChart4.Datasets.Add(dataset);
         }
     }
-
-    
 }

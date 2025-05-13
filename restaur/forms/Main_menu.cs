@@ -88,6 +88,7 @@ namespace restaur
 
         private void btn_POS_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             this.Close();
             POS pos = new POS();
             pos.Show();
