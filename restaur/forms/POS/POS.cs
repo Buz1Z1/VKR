@@ -126,11 +126,19 @@ namespace restaur.forms.POS
             da.Fill(dt);
             foreach( DataRow dr in dt.Rows)
             {
-                byte[] imageData = File.ReadAllBytes(dr[4].ToString());
-                using (MemoryStream ms =new MemoryStream(imageData))
+                if(File.Exists(dr[4].ToString()))
+                {
+                    byte[] imageData = File.ReadAllBytes(dr[4].ToString());
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        loadItems(dr[0].ToString(), dr[1].ToString(), dr[3].ToString(), dr[7].ToString(),
+                        Image.FromStream(ms));
+                    }
+                }
+                else
                 {
                     loadItems(dr[0].ToString(), dr[1].ToString(), dr[3].ToString(), dr[7].ToString(),
-                    Image.FromStream(ms));
+                        null);
                 }
 
             }

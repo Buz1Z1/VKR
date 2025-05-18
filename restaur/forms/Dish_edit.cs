@@ -70,9 +70,9 @@ namespace restaur
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
                 clear_form();
-                Menu menu = new Menu();
+                //Menu menu = new Menu();
                 if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                    menu.draw_table();
+                    //menu.draw_table();
                 this.Close();
             }
             catch (Exception ex)
@@ -94,9 +94,9 @@ namespace restaur
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
                 clear_form();
-                Menu menu = new Menu();
+                //Menu menu = new Menu();
                 if (MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK) == DialogResult.OK)
-                    menu.draw_table();
+                    //menu.draw_table();
                 this.Close();
                 
 

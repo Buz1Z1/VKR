@@ -13,6 +13,7 @@ namespace restaur.forms
 {
     public partial class teh_editcs : Form
     {
+        input_check i_c=new input_check();
         public int id_dish;
         DataTable dt_prod = new DataTable();
         List<Product> list = new List<Product>();
@@ -69,7 +70,7 @@ namespace restaur.forms
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            dg_teh.EndEdit();
             double total = 0;
             for(int i=0;i<dg_teh.RowCount-1;i++)
             {
@@ -108,24 +109,33 @@ namespace restaur.forms
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            var cmd = new NpgsqlCommand("delete from teh_card where id_dish=@id_dish", dB_Connect.conn);
-            cmd.Parameters.AddWithValue("@id_dish", id_dish);
-            dB_Connect.openConnect();
-            NpgsqlDataReader reader = cmd.ExecuteReader();
-            dB_Connect.closeConnect();
-            cmd.Dispose();
-            for (int i = 0; i < dg_teh.RowCount - 1; i++)
+            try
             {
-                cmd = new NpgsqlCommand("INSERT into teh_card (id_dish,id_prod,weight) values (@id_dish,@id_prod, @weight) ", dB_Connect.conn);
+                dg_teh.EndEdit();
+                var cmd = new NpgsqlCommand("delete from teh_card where id_dish=@id_dish", dB_Connect.conn);
                 cmd.Parameters.AddWithValue("@id_dish", id_dish);
-                cmd.Parameters.AddWithValue("@id_prod", Convert.ToInt16(dg_teh.Rows[i].Cells["id"].Value));
-                cmd.Parameters.AddWithValue("@weight", Convert.ToDouble(dg_teh.Rows[i].Cells["weight"].Value));
                 dB_Connect.openConnect();
-                NpgsqlDataReader ww = cmd.ExecuteReader();
+                NpgsqlDataReader reader = cmd.ExecuteReader();
                 dB_Connect.closeConnect();
+                cmd.Dispose();
+                for (int i = 0; i < dg_teh.RowCount - 1; i++)
+                {
+                    cmd = new NpgsqlCommand("INSERT into teh_card (id_dish,id_prod,weight) values (@id_dish,@id_prod, @weight) ", dB_Connect.conn);
+                    cmd.Parameters.AddWithValue("@id_dish", id_dish);
+                    cmd.Parameters.AddWithValue("@id_prod", Convert.ToInt16(dg_teh.Rows[i].Cells["id"].Value));
+                    cmd.Parameters.AddWithValue("@weight", Convert.ToDouble(dg_teh.Rows[i].Cells["weight"].Value));
+                    dB_Connect.openConnect();
+                    NpgsqlDataReader ww = cmd.ExecuteReader();
+                    dB_Connect.closeConnect();
+                }
+                MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK);
+                this.Close();
             }
-            MessageBox.Show("Успех", "Успех", MessageBoxButtons.OK);
-            this.Close();
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void dg_teh_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,5 +146,14 @@ namespace restaur.forms
                 dg_teh.Rows.RemoveAt(dg_teh.Rows[e.RowIndex].Index);
             }
         }
+
+        private void dg_teh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (i_c.isdigit_d(sender,e))
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }

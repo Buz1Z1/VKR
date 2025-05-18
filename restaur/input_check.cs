@@ -16,5 +16,12 @@ namespace restaur
             else
                 return false;
         }
+        public bool isdigit_d(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != ',' && e.KeyChar != (char)Keys.Back && e.KeyChar != (char)Keys.Delete)
+                return true;
+            else
+                return false;
+        }
     }
 }

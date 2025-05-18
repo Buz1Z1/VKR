@@ -93,7 +93,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(29, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 17);
+            this.label1.Size = new System.Drawing.Size(160, 21);
             this.label1.TabIndex = 8;
             this.label1.Text = "Редактор тех карты ";
             // 
@@ -203,6 +203,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             this.dg_teh.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dg_teh.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dg_teh.CausesValidation = false;
             this.dg_teh.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -260,11 +261,13 @@
             this.dg_teh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_teh_CellContentClick);
             this.dg_teh.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_teh_CellValueChanged);
             this.dg_teh.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dg_teh_EditingControlShowing);
+            this.dg_teh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dg_teh_KeyPress);
             // 
             // id
             // 
             this.id.HeaderText = "id";
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // product
             // 
@@ -323,11 +326,11 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        public Guna.UI2.WinForms.Guna2Button btn_save;
+        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewComboBoxColumn product;
         private System.Windows.Forms.DataGridViewTextBoxColumn weight;
         private System.Windows.Forms.DataGridViewImageColumn delete;
-        public Guna.UI2.WinForms.Guna2Button btn_save;
-        public System.Windows.Forms.Label label1;
     }
 }

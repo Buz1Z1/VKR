@@ -31,21 +31,32 @@ namespace restaur
             {
                 while (reader.Read())
                 {
-                    byte[] imageData = File.ReadAllBytes(reader[1].ToString());
-                    using (MemoryStream ms = new MemoryStream(imageData))
+                    
+                    if (File.Exists(reader[1].ToString()))
                     {
-                        dg_menu.Rows.Add(reader[0].ToString(), Image.FromStream(ms),
+                        byte[] imageData = File.ReadAllBytes(reader[1].ToString());
+                        using (MemoryStream ms = new MemoryStream(imageData))
+                        {
+                            dg_menu.Rows.Add(reader[0].ToString(), Bitmap.FromStream(ms),
+                                reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
+                        }
+                        
+                    }
+                    else
+                    {
+                        dg_menu.Rows.Add(reader[0].ToString(), null,
                         reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             cmd.Dispose();
             reader.DisposeAsync();
             dB_Connect.closeConnect();
+            dg_menu.AutoResizeRows();
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
