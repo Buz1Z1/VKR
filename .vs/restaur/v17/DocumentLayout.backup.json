@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\vkr\\VKR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\export_excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\export_excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\export_excel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\input_check.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\input_check.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\input_check.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -63,7 +63,7 @@
       "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|d:\\vkr\\vkr\\restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|D:\\vkr\\VKR\\restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FDE9E4B-AA6A-4E6B-9D6A-537F54501741}|restaur\\restaur.csproj|solutionrelative:restaur\\forms\\reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -146,8 +146,7 @@
               "RelativeToolTip": "restaur\\input_check.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T13:54:27.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T13:54:27.021Z"
             },
             {
               "$type": "Document",
@@ -170,8 +169,7 @@
               "RelativeToolTip": "restaur\\forms\\Orders.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T10:50:28.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T10:50:28.18Z"
             },
             {
               "$type": "Document",
@@ -202,12 +200,11 @@
               "Title": "teh_editcs.cs",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\teh_editcs.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\teh_editcs.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\teh_editcs.cs*",
-              "RelativeToolTip": "restaur\\forms\\teh_editcs.cs*",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\teh_editcs.cs",
+              "RelativeToolTip": "restaur\\forms\\teh_editcs.cs",
               "ViewState": "AgIAAGgAAAAAAAAAAAAcwHEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T18:02:15.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T18:02:15.841Z"
             },
             {
               "$type": "Document",
@@ -215,11 +212,10 @@
               "Title": "teh_editcs.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\teh_editcs.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\teh_editcs.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\teh_editcs.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
-              "RelativeToolTip": "restaur\\forms\\teh_editcs.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\teh_editcs.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "restaur\\forms\\teh_editcs.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T18:02:04.75Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-05-12T18:02:04.75Z"
             },
             {
               "$type": "Document",
@@ -231,8 +227,7 @@
               "RelativeToolTip": "restaur\\forms\\Add_client.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAwwDoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:57:45.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T14:57:45.316Z"
             },
             {
               "$type": "Document",
@@ -243,8 +238,7 @@
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Add_client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "restaur\\forms\\Add_client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:57:43.508Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-05-12T14:57:43.508Z"
             },
             {
               "$type": "Document",
@@ -256,8 +250,7 @@
               "RelativeToolTip": "restaur\\forms\\Client.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAAACMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:13:40.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T14:13:40.262Z"
             },
             {
               "$type": "Document",
@@ -268,8 +261,7 @@
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "restaur\\forms\\Client.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T14:13:38.617Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-05-12T14:13:38.617Z"
             },
             {
               "$type": "Document",
@@ -281,8 +273,7 @@
               "RelativeToolTip": "restaur\\forms\\Main_menu.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAYwFoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:27:52.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-12T10:27:52.713Z"
             },
             {
               "$type": "Document",
@@ -316,8 +307,7 @@
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Main_menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "restaur\\forms\\Main_menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-12T10:24:45.703Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-05-12T10:24:45.703Z"
             },
             {
               "$type": "Document",
@@ -329,8 +319,7 @@
               "RelativeToolTip": "restaur\\forms\\POS\\POS.cs",
               "ViewState": "AgIAAHcAAAAAAAAAAAAWwIUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T16:03:41.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-01T16:03:41.703Z"
             },
             {
               "$type": "Document",
@@ -341,8 +330,7 @@
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\POS\\POS.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "restaur\\forms\\POS\\POS.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T16:03:36.83Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-05-01T16:03:36.83Z"
             },
             {
               "$type": "Document",
@@ -350,9 +338,9 @@
               "Title": "Export_excel.cs",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\Export_excel.cs",
               "RelativeDocumentMoniker": "restaur\\Export_excel.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\Export_excel.cs*",
-              "RelativeToolTip": "restaur\\Export_excel.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwDMAAAAJAAAAAAAAAA==",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\Export_excel.cs",
+              "RelativeToolTip": "restaur\\Export_excel.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwCwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T14:51:16.19Z",
               "EditorCaption": ""
@@ -378,8 +366,7 @@
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Dish_edit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "restaur\\forms\\Dish_edit.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T13:22:09.323Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-04-29T13:22:09.323Z"
             },
             {
               "$type": "Document",
@@ -391,8 +378,7 @@
               "RelativeToolTip": "restaur\\forms\\Dish_edit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T13:22:11.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T13:22:11.614Z"
             },
             {
               "$type": "Document",
@@ -423,12 +409,11 @@
               "Title": "Storage.cs",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\Storage.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs*",
-              "RelativeToolTip": "restaur\\forms\\Storage.cs*",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs",
+              "RelativeToolTip": "restaur\\forms\\Storage.cs",
               "ViewState": "AgIAAG8AAAAAAAAAAAAmwHsAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:43:53.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T10:43:53.521Z"
             },
             {
               "$type": "Document",
@@ -436,11 +421,10 @@
               "Title": "Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs",
               "RelativeDocumentMoniker": "restaur\\forms\\Storage.cs",
-              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
-              "RelativeToolTip": "restaur\\forms\\Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "restaur\\forms\\Storage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T10:00:13.733Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-04-29T10:00:13.733Z"
             },
             {
               "$type": "Document",
@@ -451,8 +435,7 @@
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Orders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "restaur\\forms\\Orders.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T19:04:24.126Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-04-28T19:04:24.126Z"
             },
             {
               "$type": "Document",
@@ -464,8 +447,7 @@
               "RelativeToolTip": "restaur\\forms\\Reports.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAIwB4AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T18:22:25.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T18:22:25.136Z"
             },
             {
               "$type": "Document",
@@ -500,8 +482,7 @@
               "RelativeToolTip": "restaur\\forms\\Menu.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwDoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T07:50:08.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T07:50:08.069Z"
             },
             {
               "$type": "Document",
@@ -512,8 +493,7 @@
               "ToolTip": "D:\\vkr\\VKR\\restaur\\forms\\Menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "restaur\\forms\\Menu.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T07:50:01.078Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-04-12T07:50:01.078Z"
             }
           ]
         }
